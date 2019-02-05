@@ -23,8 +23,8 @@ public class Login extends AppCompatActivity {
 
     //Utenti fittizi
     private Utente ut1 =
-            new Utente("Simone", "Meloni", "simone.meloni@gmail.com",
-                    "simone", "05/09/1976", 1234567891, 1234567891);
+            new Utente("demo", "demo", "1",
+                    "1", "05/09/1976", 1234567891, 1234567891);
     private Utente ut2 = new Utente("Gianni", "Lai", "gianni.lai@gmail.com",
             "gianni", "12/03/1966", 1234567891, 1234567891);
     private Utente ut3 = new Utente("Clara", "Melis", "clara.melis@gmail.com",

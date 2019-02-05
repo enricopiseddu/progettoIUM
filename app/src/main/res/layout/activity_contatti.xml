@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Contatti">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_contatti" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="  Per contattare la tua Agenzia,\n    scegli uno di questi metodi"
+                android:textSize="25dp" />
+
+            <!-- SCRIVI MESSAGGIO ALL'AGENZIA-->
+            <RadioButton
+                android:id="@+id/scelta_invia_messaggio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Invia Messaggio"
+                />
+
+            <TextView
+                android:id="@+id/scrivi_messaggio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Scrivi messaggio:"
+                android:visibility="gone"
+                />
+
+            <EditText
+                android:id="@+id/testo_messaggio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textLongMessage"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/conferma_invio_messaggio"
+                android:text=" Il tuo messaggio è stato inviato!\n Controlla la tua casella di posta"
+                android:textColor="@android:color/holo_green_dark"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                android:layout_width="127dp"
+                android:layout_height="match_parent"
+                android:text="INVIA"
+                android:layout_marginLeft="225dp"
+                android:id="@+id/pulsante_invia_messaggio"
+                android:visibility="gone"/>
+
+            <!-- CHIAMA AGENZIA-->
+
+            <RadioButton
+                android:id="@+id/scelta_chiama_agenzia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chiama Agenzia" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="tel. 070 51 05 115"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:id="@+id/numero_tel_agenzia"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <!-- VOGLIO ESSERE RICONTATTATO-->
+            <RadioButton
+                android:id="@+id/scelta_voglio_essere_ricontattato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Voglio essere ricontattato"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" In quale fascia oraria desideri essere contattato? "
+                android:id="@+id/msg_fascia_oraria"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/black"
+
+                />
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/fascia_oraria"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal"
+
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="La tua richiesta è stata presa in carico.\n    Verrai ricontattato al più presto"
+                android:textColor="@android:color/holo_green_dark"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                android:id="@+id/msg_conferma_orario"/>
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="CONFERMA"
+                android:id="@+id/ok_selezione_orario"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

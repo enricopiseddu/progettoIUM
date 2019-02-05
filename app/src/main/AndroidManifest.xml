@@ -20,6 +20,10 @@
         <activity
             android:name=".Profilo"
             android:label="@string/title_activity_profilo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Contatti"
+            android:label="@string/title_activity_contatti"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

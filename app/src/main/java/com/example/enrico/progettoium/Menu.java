@@ -50,6 +50,14 @@ public class Menu extends AppCompatActivity {
             }
         });
 
+        contatta_agenzia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent contatta = new Intent(Menu.this, Contatti.class);
+                startActivity(contatta);
+            }
+        });
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
