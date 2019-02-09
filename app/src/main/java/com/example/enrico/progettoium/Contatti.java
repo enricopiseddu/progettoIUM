@@ -1,5 +1,7 @@
 package com.example.enrico.progettoium;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,7 +20,7 @@ import org.w3c.dom.Text;
 public class Contatti extends AppCompatActivity {
 
     TextView scrivi_messaggio, conferma_invio_messaggio, numero_tel_agenzia,
-            msg_selezione_fascia_oraria, msg_conferma_orario;
+             msg_selezione_fascia_oraria, msg_conferma_orario;
     EditText testo_messaggio;
     Button pulsante_invia_messaggio, ok_selezione_orario;
     RadioButton scelta_invia_messaggio, scelta_chiama_agenzia, scelta_voglio_Essere_ricontattato;
@@ -59,11 +61,19 @@ public class Contatti extends AppCompatActivity {
             testo_messaggio.setVisibility(View.VISIBLE);
             pulsante_invia_messaggio.setVisibility(View.VISIBLE);
 
+            numero_tel_agenzia.setVisibility(View.GONE);
+            msg_selezione_fascia_oraria.setVisibility(View.GONE);
+            selezione_fascia_oraria.setVisibility(View.GONE);
+            ok_selezione_orario.setVisibility(View.GONE);
+            msg_conferma_orario.setVisibility(View.GONE);
+
             pulsante_invia_messaggio.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                         conferma_invio_messaggio.setVisibility(View.VISIBLE);
                         pulsante_invia_messaggio.setVisibility(View.GONE);
+
+
                 }
             });
         }
@@ -73,6 +83,25 @@ public class Contatti extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             numero_tel_agenzia.setVisibility(View.VISIBLE);
+
+            scrivi_messaggio.setVisibility(View.GONE);
+            testo_messaggio.setVisibility(View.GONE);
+            pulsante_invia_messaggio.setVisibility(View.GONE);
+            msg_selezione_fascia_oraria.setVisibility(View.GONE);
+            selezione_fascia_oraria.setVisibility(View.GONE);
+            ok_selezione_orario.setVisibility(View.GONE);
+            msg_conferma_orario.setVisibility(View.GONE);
+            conferma_invio_messaggio.setVisibility(View.GONE);
+
+            numero_tel_agenzia.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                    callIntent.setData(Uri.parse("tel:0705105115"));
+                    startActivity(callIntent);
+                }
+            });
         }
     });
 
@@ -82,6 +111,13 @@ public class Contatti extends AppCompatActivity {
             msg_selezione_fascia_oraria.setVisibility(View.VISIBLE);
             selezione_fascia_oraria.setVisibility(View.VISIBLE);
             ok_selezione_orario.setVisibility(View.VISIBLE);
+
+
+            scrivi_messaggio.setVisibility(View.GONE);
+            testo_messaggio.setVisibility(View.GONE);
+            pulsante_invia_messaggio.setVisibility(View.GONE);
+            numero_tel_agenzia.setVisibility(View.GONE);
+            conferma_invio_messaggio.setVisibility(View.GONE);
 
             ok_selezione_orario.setOnClickListener(new View.OnClickListener() {
                 @Override

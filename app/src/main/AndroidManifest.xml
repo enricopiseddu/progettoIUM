@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.enrico.progettoium">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,6 +26,10 @@
         <activity
             android:name=".Contatti"
             android:label="@string/title_activity_contatti"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LeMiePolizze"
+            android:label="@string/title_activity_le_mie_polizze"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

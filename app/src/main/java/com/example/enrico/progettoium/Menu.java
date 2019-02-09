@@ -50,6 +50,14 @@ public class Menu extends AppCompatActivity {
             }
         });
 
+        le_mie_polizze.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent le_mie_polizze = new Intent(Menu.this, LeMiePolizze.class );
+                startActivity(le_mie_polizze);
+            }
+        });
+
         contatta_agenzia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
