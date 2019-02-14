@@ -30,6 +30,10 @@
         <activity
             android:name=".LeMiePolizze"
             android:label="@string/title_activity_le_mie_polizze"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".VisualizzaPolizza"
+            android:label="@string/title_activity_visualizza_polizza"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

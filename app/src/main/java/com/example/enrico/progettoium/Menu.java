@@ -9,12 +9,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Menu extends AppCompatActivity {
 
     TextView benvenuto;
     Utente utente=null;
     Button il_mio_profilo, le_mie_polizze, preventivi, contatta_agenzia, logout;
+
+
 
     public static final String UTENTE_EXTRA="com.example.enrico.progettoium.Utente";
 
@@ -30,7 +33,6 @@ public class Menu extends AppCompatActivity {
         preventivi=(Button)findViewById(R.id.preventivi_button);
         contatta_agenzia=(Button)findViewById((R.id.contatta_agenzia_button));
         logout=(Button) findViewById(R.id.logout_button);
-
 
         Intent intent = getIntent();
         Serializable obj = intent.getSerializableExtra(Login.UTENTE_EXTRA);
@@ -53,7 +55,7 @@ public class Menu extends AppCompatActivity {
         le_mie_polizze.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent le_mie_polizze = new Intent(Menu.this, LeMiePolizze.class );
+                Intent le_mie_polizze = new Intent(Menu.this, LeMiePolizze.class);
                 startActivity(le_mie_polizze);
             }
         });

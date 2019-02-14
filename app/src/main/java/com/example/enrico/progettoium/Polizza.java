@@ -1,14 +1,17 @@
 package com.example.enrico.progettoium;
 
+import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Random;
 
-public class Polizza {
+public class Polizza implements Serializable{
 
     private Veicolo veicolo;
-    private float prezzo=160.00f;
-    private ArrayList<String> accessori;
-    private String data_scadenza;
+    private int prezzo=160;
+    private ArrayList<String> accessori = new ArrayList<String>();
+    private int annoScadenza;
+    private int meseScadenza;
+    private int classeMerito;
 
     private boolean assistenza_stradale=false;
     private boolean kasko=false;
@@ -18,11 +21,19 @@ public class Polizza {
     private boolean cristalli=false;
 
     public Polizza(Veicolo veicolo){
+        Random rand = new Random(); //numero random per generare la classe di merito
+        this.classeMerito = rand.nextInt(16);
         this.veicolo=veicolo;
-        this.prezzo=prezzo*veicolo.getCilindrata()/100;
-        this.data_scadenza="31-12-2019";
+        this.setPrezzo((int) (getPrezzo() * veicolo.getCilindrata()/500 *(classeMerito/10+0.9f)));
     }
 
+    public Veicolo getVeicolo(){
+        return veicolo;
+    }
+
+    public void setVeicolo(Veicolo v){
+        this.veicolo=v;
+    }
 
     public boolean isAssistenza_stradale() {
         return assistenza_stradale;
@@ -74,41 +85,73 @@ public class Polizza {
 
     public void aggiornaAccessori(){
         if(isAssistenza_stradale())
-            accessori.add("Assistenza Stradale");
+            getAccessori().add("Assistenza Stradale");
         else
-            accessori.remove("Assistenza Stradale");
+            getAccessori().remove("Assistenza Stradale");
 
         if(isCristalli())
-            accessori.add("Cristalli");
+            getAccessori().add("Cristalli");
         else
-            accessori.remove("Cristalli");
+            getAccessori().remove("Cristalli");
 
         if(isFurto())
-            accessori.add("Furto");
+            getAccessori().add("Furto");
         else
-            accessori.remove("Furto");
+            getAccessori().remove("Furto");
 
         if(isGuida_esperta())
-            accessori.add("Guida Esperta");
+            getAccessori().add("Guida Esperta");
         else
-            accessori.remove("Guida Esperta");
+            getAccessori().remove("Guida Esperta");
 
         if (isIncendio())
-            accessori.add("Incendio");
+            getAccessori().add("Incendio");
         else
-            accessori.remove("Incendio");
+            getAccessori().remove("Incendio");
 
         if(isKasko())
-            accessori.add("Kasko");
+            getAccessori().add("Kasko");
         else
-            accessori.remove("Kasko");
+            getAccessori().remove("Kasko");
     }
 
-    public String getData_scadenza() {
-        return data_scadenza;
+    public float getPrezzo() {
+        return prezzo;
     }
 
-    public void setData_scadenza(String data_scadenza) {
-        this.data_scadenza = data_scadenza;
+    public void setPrezzo(int prezzo) {
+        this.prezzo = prezzo;
+    }
+
+    public int getClasseMerito() {
+        return classeMerito;
+    }
+
+    public void setClasseMerito(int classeMerito) {
+        this.classeMerito = classeMerito;
+    }
+
+    public int getAnnoScadenza() {
+        return annoScadenza;
+    }
+
+    public void setAnnoScadenza(int annoScadenza) {
+        this.annoScadenza = annoScadenza;
+    }
+
+    public int getMeseScadenza() {
+        return meseScadenza;
+    }
+
+    public void setMeseScadenza(int meseScadenza) {
+        this.meseScadenza = meseScadenza;
+    }
+
+    public ArrayList<String> getAccessori() {
+        return accessori;
+    }
+
+    public void setAccessori(ArrayList<String> accessori) {
+        this.accessori = accessori;
     }
 }

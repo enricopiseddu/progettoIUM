@@ -1,6 +1,10 @@
 package com.example.enrico.progettoium;
 
-public class Veicolo {
+import android.provider.SearchRecentSuggestions;
+
+import java.io.Serializable;
+
+public class Veicolo implements Serializable {
 
     private String modello;
     private String targa;
