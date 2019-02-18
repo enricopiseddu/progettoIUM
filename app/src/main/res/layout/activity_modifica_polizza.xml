@@ -65,7 +65,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="- Assistenza Stradale            "
-                android:textSize="20dp"/>
+                android:textSize="20dp"
+                android:id="@+id/assistenzaStradale"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,7 +76,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="- Cristalli                                  "
-                android:textSize="20dp"/>
+                android:textSize="20dp"
+                android:id="@+id/cristalli"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -85,7 +87,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="- Furto                                      "
-                android:textSize="20dp"/>
+                android:textSize="20dp"
+                android:id="@+id/furto"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -95,7 +98,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="- Guida Esperta (>26anni)     "
-                android:textSize="20dp"/>
+                android:textSize="20dp"
+                android:id="@+id/guidaEsperta"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -105,7 +109,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="- Incendio                                 "
-                android:textSize="20dp"/>
+                android:textSize="20dp"
+                android:id="@+id/incendio"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -114,7 +119,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="- Kasko                                     "
-                android:textSize="20dp"/>
+                android:textSize="20dp"
+                android:id="@+id/kasko"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -124,6 +130,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:id="@+id/totaleAccessori"
+                android:gravity="center_horizontal"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="AGGIORNA ACCESSORI"
+                android:background="@android:color/holo_green_light"
+                android:textSize="20dp"
+                android:id="@+id/pulsanteAggiornaAccessori"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Accessori aggiornati correttamente"
+                android:textColor="@android:color/holo_green_dark"
+                android:id="@+id/msg_aggiornamento_accessori"
+                android:gravity="center_horizontal"
+                android:visibility="invisible"
+                />
+
 
         </LinearLayout>
     </ScrollView>
