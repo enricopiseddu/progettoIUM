@@ -70,9 +70,12 @@ public class Contatti extends AppCompatActivity {
             pulsante_invia_messaggio.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                        conferma_invio_messaggio.setVisibility(View.VISIBLE);
-                        pulsante_invia_messaggio.setVisibility(View.GONE);
-
+                        if(testo_messaggio.getText().length()>0) {
+                            conferma_invio_messaggio.setVisibility(View.VISIBLE);
+                            pulsante_invia_messaggio.setVisibility(View.GONE);
+                        }
+                        else
+                            testo_messaggio.setError("Scrivi il messaggio");
 
                 }
             });

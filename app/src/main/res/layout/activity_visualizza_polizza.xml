@@ -26,20 +26,39 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/white"
+
             android:orientation="vertical"
             android:id="@+id/linearLayout">
 
 
             <android.support.v4.widget.Space
                 android:layout_width="match_parent"
-                android:layout_height="55dp" />
+                android:layout_height="56dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/statoPolizza"
+                android:textSize="23dp"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -47,19 +66,30 @@
                 android:text=""
                 android:id="@+id/infoVeicolo"
                 android:textSize="23dp"
+                android:textColor="@android:color/black"
                 />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/statoPolizza"
-                android:textSize="23dp"
-                />
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
 
             <TextView
                 android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Accessori aggiuntivi: "
+                android:textSize="18dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/accessori"/>
+                android:id="@+id/accessori"
+                android:textSize="17dp"/>
 
 
 

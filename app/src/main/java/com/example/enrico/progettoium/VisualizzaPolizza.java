@@ -32,12 +32,13 @@ public class VisualizzaPolizza extends AppCompatActivity {
         statoPolizza=(TextView)findViewById(R.id.statoPolizza);
         accessori=(TextView)findViewById(R.id.accessori);
 
-        infoVeicolo.setText("Veicolo                " + polizza.getVeicolo().getModello() + "\n" +
-                            "Targa                   " + polizza.getVeicolo().getTarga() + "\n\n" +
-                            "Data Scadenza  " + polizza.getMeseScadenza()+ "/" +
-                                                polizza.getAnnoScadenza()+
-                                                "\n" +
-                            "Premio €             " + polizza.getPrezzo()
+        infoVeicolo.setText("Veicolo:                " + polizza.getVeicolo().getModello() + "\n" +
+                            "Targa:                    " + polizza.getVeicolo().getTarga() + "\n\n" +
+                            "N° Polizza:            " + polizza.getNumeroPolizza() + "\n"+
+                            "Classe di Merito: " + polizza.getClasseMerito() + "\n" +
+                            "Data Scadenza:   " + polizza.getMeseScadenza()+ "/" +
+                                                polizza.getAnnoScadenza() + "\n\n" +
+                            "Premio:                 € " + polizza.getPrezzo() +"0"
         );
 
 
@@ -49,7 +50,7 @@ public class VisualizzaPolizza extends AppCompatActivity {
             statoPolizza.setTextColor(Color.RED);
         }
         else if(polizza.getAnnoScadenza()==2019){
-                if(polizza.getMeseScadenza()>=2) {
+                if(polizza.getMeseScadenza()>=2){
                     statoPolizza.setText("POLIZZA ATTIVA");
                     statoPolizza.setTextColor(Color.GREEN);
                 }
@@ -63,6 +64,12 @@ public class VisualizzaPolizza extends AppCompatActivity {
                 statoPolizza.setTextColor(Color.GREEN);
              }
 
+
+             if(polizza.getMeseScadenza()==2 && polizza.getAnnoScadenza()==2019){
+                statoPolizza.setText("POLIZZA IN SCADENZA");
+                //colore arancione
+                statoPolizza.setTextColor(Color.rgb(255,215,0));
+             }
 
 
 

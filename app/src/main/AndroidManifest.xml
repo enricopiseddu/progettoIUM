@@ -34,6 +34,10 @@
         <activity
             android:name=".VisualizzaPolizza"
             android:label="@string/title_activity_visualizza_polizza"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ModificaPolizza"
+            android:label="@string/title_activity_modifica_polizza"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

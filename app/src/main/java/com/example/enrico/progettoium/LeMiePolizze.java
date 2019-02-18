@@ -18,11 +18,11 @@ import java.util.Date;
 public class LeMiePolizze extends AppCompatActivity {
 
     Veicolo v1 = new Veicolo("Toyota Yaris", "EK729FG", 1400);
-    Veicolo v2 = new Veicolo("Fiat Punto", "BN7980AA", 1300);
+    Veicolo v2 = new Veicolo("Fiat Punto", "BN780AA", 1300);
     Veicolo v3 = new Veicolo("Lancia Ypsilon", "DE154LR", 1200 );
-    Polizza p1 = new Polizza(v1);
-    Polizza p2 = new Polizza(v2);
-    Polizza p3 = new Polizza(v3);
+    Polizza p1 = new Polizza(v1, 1520101);
+    Polizza p2 = new Polizza(v2, 1478520);
+    Polizza p3 = new Polizza(v3, 3250125);
 
 
 
@@ -116,6 +116,33 @@ public class LeMiePolizze extends AppCompatActivity {
             }
         });
 
+
+        modifica1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent modifica_polizza = new Intent(LeMiePolizze.this, ModificaPolizza.class);
+                modifica_polizza.putExtra(POLIZZA_EXTRA, p1);
+                startActivity(modifica_polizza);
+            }
+        });
+
+        modifica2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent modifica_polizza = new Intent(LeMiePolizze.this, ModificaPolizza.class);
+                modifica_polizza.putExtra(POLIZZA_EXTRA, p2);
+                startActivity(modifica_polizza);
+            }
+        });
+
+        modifica3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent modifica_polizza = new Intent(LeMiePolizze.this, ModificaPolizza.class);
+                modifica_polizza.putExtra(POLIZZA_EXTRA, p3);
+                startActivity(modifica_polizza);
+            }
+        });
 
 
 

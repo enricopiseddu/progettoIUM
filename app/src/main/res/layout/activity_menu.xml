@@ -12,7 +12,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteY="0dp"
+        android:background="@android:color/white">
 
 
         <LinearLayout
