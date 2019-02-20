@@ -5,6 +5,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import java.io.Serializable;
 
@@ -14,6 +16,7 @@ public class VisualizzaPolizza extends AppCompatActivity {
 
     TextView infoVeicolo, statoPolizza, accessori;
     String listaAccessori;
+    Button pagaOra;
 
 
     @Override
@@ -32,6 +35,8 @@ public class VisualizzaPolizza extends AppCompatActivity {
         statoPolizza=(TextView)findViewById(R.id.statoPolizza);
         accessori=(TextView)findViewById(R.id.accessori);
 
+        pagaOra=(Button)findViewById(R.id.pagaOra);
+
         infoVeicolo.setText("Veicolo:                " + polizza.getVeicolo().getModello() + "\n" +
                             "Targa:                    " + polizza.getVeicolo().getTarga() + "\n\n" +
                             "N° Polizza:            " + polizza.getNumeroPolizza() + "\n"+
@@ -48,6 +53,7 @@ public class VisualizzaPolizza extends AppCompatActivity {
         if(polizza.getAnnoScadenza()<2019){
             statoPolizza.setText("POLIZZA SCADUTA");
             statoPolizza.setTextColor(Color.RED);
+            pagaOra.setVisibility(View.VISIBLE);
         }
         else if(polizza.getAnnoScadenza()==2019){
                 if(polizza.getMeseScadenza()>=2){
@@ -57,6 +63,7 @@ public class VisualizzaPolizza extends AppCompatActivity {
                 else{
                     statoPolizza.setText("POLIZZA SCADUTA");
                     statoPolizza.setTextColor(Color.RED);
+                    pagaOra.setVisibility(View.VISIBLE);
                 }
              }
              else{
@@ -69,6 +76,7 @@ public class VisualizzaPolizza extends AppCompatActivity {
                 statoPolizza.setText("POLIZZA IN SCADENZA");
                 //colore arancione
                 statoPolizza.setTextColor(Color.rgb(255,215,0));
+                pagaOra.setVisibility(View.VISIBLE);
              }
 
 

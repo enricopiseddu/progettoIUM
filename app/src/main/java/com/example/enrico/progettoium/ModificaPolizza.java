@@ -54,8 +54,8 @@ public class ModificaPolizza extends AppCompatActivity {
         incendio=(Switch)findViewById(R.id.incendio);
         kasko=(Switch)findViewById(R.id.kasko);
 
+        settaggioAccessori();
         totaleAccessori.setText("Totale Accessori € "+Integer.toString(prezzoAccessori)+".00");
-
 
         assistenzaStradale.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,7 +103,8 @@ public class ModificaPolizza extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(guidaEsperta.isChecked()){
-                    prezzoAccessori-=90;
+                    if(prezzoAccessori>=90)
+                        prezzoAccessori-=90;
                     totaleAccessori.setText("Totale Accessori € "+Integer.toString(prezzoAccessori)+".00");
                 }
                 else {
@@ -148,9 +149,42 @@ public class ModificaPolizza extends AppCompatActivity {
                 msg_aggiornamento_accessori.setVisibility(View.VISIBLE);
             }
         });
+    }
 
 
+    public void settaggioAccessori() {
+        if (polizza.isAssistenza_stradale()){
+            assistenzaStradale.setChecked(true);
+             prezzoAccessori += 50;
+        }
+        if(polizza.isCristalli()) {
+            cristalli.setChecked(true);
+            prezzoAccessori += 110;
+        }
 
+        if(polizza.isFurto()) {
+            furto.setChecked(true);
+            prezzoAccessori += 470;
+        }
+
+
+        if(polizza.isIncendio()) {
+            incendio.setChecked(true);
+            prezzoAccessori += 380;
+        }
+
+        if(polizza.isKasko()) {
+            kasko.setChecked(true);
+            prezzoAccessori += 740;
+        }
+
+        if(polizza.isGuida_esperta()) {
+            guidaEsperta.setChecked(true);
+            if(prezzoAccessori>=90)
+                prezzoAccessori-=90;
+        }
+        else{
+            prezzoAccessori+=90;
+        }
     }
 }
-

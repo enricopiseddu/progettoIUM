@@ -91,6 +91,17 @@
                 android:id="@+id/accessori"
                 android:textSize="17dp"/>
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_green_light"
+                android:text="PAGA ORA"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:id="@+id/pagaOra"
+                />
+
 
 
 

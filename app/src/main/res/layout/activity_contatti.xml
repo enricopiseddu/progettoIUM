@@ -111,9 +111,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="tel. 070 51 05 115"
+                            android:text="070 51 05 115"
                             android:textSize="25dp"
-                            android:textStyle="bold|italic"
+                            android:textStyle="bold"
                             android:textColor="@android:color/holo_blue_dark"
                             android:visibility="gone"
                             android:id="@+id/numero_tel_agenzia"
