@@ -11,7 +11,7 @@ public class Polizza implements Serializable{
     private ArrayList<String> accessori = new ArrayList<String>();
     private int annoScadenza;
     private int meseScadenza;
-    private int classeMerito;
+    static private int classeMerito;
     private int numeroPolizza;
 
     private boolean assistenza_stradale=false;
@@ -21,9 +21,8 @@ public class Polizza implements Serializable{
     private boolean guida_esperta=false;
     private boolean cristalli=false;
 
-    public Polizza(Veicolo veicolo, int numeroPolizza){
-        Random rand = new Random(); //numero random per generare la classe di merito
-        this.classeMerito = rand.nextInt(16);
+    public Polizza(Veicolo veicolo, int numeroPolizza, int classeMerito){
+        this.classeMerito=classeMerito;
         this.veicolo=veicolo;
         this.setPrezzo((int) (getPrezzo() * veicolo.getCilindrata()/500 *(classeMerito/10+0.9f)));
         this.setNumeroPolizza(numeroPolizza);

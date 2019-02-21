@@ -66,6 +66,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/address"
                 android:text=" Indirizzo:"
                 />
             <EditText
@@ -81,12 +82,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/phone"
                 android:text=" Cellulare:"
                 />
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="3401234561"
                 android:id="@+id/cellulare"
                 android:inputType="phone"
                 />
@@ -98,12 +99,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/email"
                 android:text=" Email:"
                 />
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="nome.cognome@domain.com"
                 android:id="@+id/email"
                 android:inputType="textEmailAddress"
                />
@@ -115,11 +116,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=" Numero Carta di Credito:"
+                android:drawableLeft="@drawable/creditcard"
                 />
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1234-5678-9123-4567"
                 android:id="@+id/carta_credito"
                 android:inputType="number"
                 />

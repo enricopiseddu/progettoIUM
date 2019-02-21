@@ -30,7 +30,6 @@ public class Login extends AppCompatActivity {
     private Utente ut3 = new Utente("Clara", "Melis", "clara.melis@gmail.com",
             "clara", "1975-12-05", 1234567891, 1234567891);
 
-
     private String actualUsername, actualPassword;
 
     //utente che si dovrà loggare, per ora NULL
@@ -74,7 +73,6 @@ public class Login extends AppCompatActivity {
                     //controllo se l'utente compare nella lista "utenti"
                     for (Utente u : utenti)
                     {
-
                         /*
                           se l'username e password dell'utente corrispondono ad un
                           utente X presente nella lista, actualUser sarà l'utente X,
@@ -92,17 +90,10 @@ public class Login extends AppCompatActivity {
                         }
                     }
 
-
                     if(actualUser==null) {
                         autenticazioneFallita = (TextView) findViewById(R.id.autenticazioneFallita);
                         autenticazioneFallita.setVisibility(View.VISIBLE);
                     }
-
-
-
-
-
-
                 }
             }
         });

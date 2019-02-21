@@ -2,6 +2,7 @@ package com.example.enrico.progettoium;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -19,7 +20,7 @@ public class Profilo extends AppCompatActivity {
     TextView nome_cognome, msg_aggiornamento_dati;
     Button salva_dati;
 
-    private String new_indirizzo,new_cellulare,new_email,new_carta_credito;
+    private String new_indirizzo, new_email, new_cellulare, new_carta_credito;
     Utente utente;
 
     @Override
@@ -37,32 +38,51 @@ public class Profilo extends AppCompatActivity {
         carta_credito=(EditText)findViewById(R.id.carta_credito);
         salva_dati=(Button)findViewById(R.id.salva_dati);
 
-
-
         Intent intent = getIntent();
         Serializable obj = intent.getSerializableExtra(Menu.UTENTE_EXTRA);
 
         utente=(Utente)obj;
 
         nome_cognome.setText( utente.getNome() + " " + utente.getCognome());
-        email.setText(utente.getEmail());
-        indirizzo.setText( utente.getIndirizzo());
+
+        if(utente.getNewEmail()==null)
+            email.setText(utente.getEmail());
+        else
+            email.setText(utente.getNewEmail());
+
+        if(utente.getNewNrCartaCredito()==-1)
+            carta_credito.setText(""+ utente.getNrCartaCredito());
+        else
+            carta_credito.setText("" + utente.getNewNrCartaCredito());
+
+        if(utente.getNewIndirizzo()==null)
+            indirizzo.setText(utente.getIndirizzo());
+        else
+            indirizzo.setText(utente.getNewIndirizzo());
+
+        if(utente.getNewNrTelefono()==-1)
+            cellulare.setText("" + utente.getNrTelefono());
+        else
+            cellulare.setText("" + utente.getNewNrTelefono());
+
 
         salva_dati.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new_indirizzo=indirizzo.getText().toString();
-                utente.setIndirizzo(new_indirizzo);
+                new_email=email.getText().toString();
+                new_carta_credito=carta_credito.getText().toString();
+                new_cellulare=cellulare.getText().toString();
+
+                utente.setNewIndirizzo(new_indirizzo);
+                utente.setNewEmail(new_email);
+                utente.setNewNrCartaCredito(Long.valueOf(new_carta_credito));
+                utente.setNewNrTelefono(Long.valueOf(new_cellulare));
+
                 msg_aggiornamento_dati.setVisibility(View.VISIBLE);
 
             }
         });
-
-
-
-
-
-
     }
 
 }

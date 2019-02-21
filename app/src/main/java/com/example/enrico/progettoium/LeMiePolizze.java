@@ -20,9 +20,9 @@ public class LeMiePolizze extends AppCompatActivity {
     Veicolo v1 = new Veicolo("Toyota Yaris", "EK729FG", 1400);
     Veicolo v2 = new Veicolo("Fiat Punto", "BN780AA", 1300);
     Veicolo v3 = new Veicolo("Lancia Ypsilon", "DE154LR", 1200 );
-    Polizza p1 = new Polizza(v1, 1520101);
-    Polizza p2 = new Polizza(v2, 1478520);
-    Polizza p3 = new Polizza(v3, 3250125);
+    Polizza p1 = new Polizza(v1, 1520101, 10);
+    Polizza p2 = new Polizza(v2, 1478520, 10);
+    Polizza p3 = new Polizza(v3, 3250125, 10);
 
 
 

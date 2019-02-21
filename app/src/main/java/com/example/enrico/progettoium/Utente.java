@@ -9,10 +9,18 @@ public class Utente implements Serializable {
     private String cognome;
     private String password;
     private String dataNascita;
+
     private String email;
+    static private String newEmail;
+
     private long nrCartaCredito;
+    static private long newNrCartaCredito=-1;
+
     private long nrTelefono;
+    static private long newNrTelefono=-1;
+
     private String Indirizzo;
+    static private String newIndirizzo;
 
 
     //costruttore
@@ -27,7 +35,6 @@ public class Utente implements Serializable {
         this.setNrCartaCredito(nrCartaCredito);
         this.setNrTelefono(nrTelefono);
     }
-
 
     public String getNome() {
         return nome;
@@ -91,5 +98,38 @@ public class Utente implements Serializable {
 
     public void setIndirizzo(String indirizzo) {
         Indirizzo = indirizzo;
+    }
+
+    public String getNewIndirizzo() {
+        return newIndirizzo;
+    }
+
+    public void setNewIndirizzo(String newIndirizzo) {
+        this.newIndirizzo = newIndirizzo;
+    }
+
+
+    public String getNewEmail() {
+        return newEmail;
+    }
+
+    public void setNewEmail(String newEmail) {
+        this.newEmail = newEmail;
+    }
+
+    public long getNewNrCartaCredito() {
+        return newNrCartaCredito;
+    }
+
+    public  void setNewNrCartaCredito(long newNrCartaCredito) {
+        this.newNrCartaCredito = newNrCartaCredito;
+    }
+
+    public long getNewNrTelefono() {
+        return newNrTelefono;
+    }
+
+    public void setNewNrTelefono(long newNrTelefono) {
+        this.newNrTelefono = newNrTelefono;
     }
 }
