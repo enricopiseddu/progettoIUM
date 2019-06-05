@@ -5,19 +5,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-
 import java.io.Serializable;
-import java.util.ArrayList;
+
 
 public class Menu extends AppCompatActivity {
+
 
     TextView benvenuto;
     Utente utente=null;
     Button il_mio_profilo, le_mie_polizze, preventivi, contatta_agenzia, logout;
 
 
+    public static int state=-1; //-1: polizze scadute, 0: polizze in scadenza, 1: polizze attive
 
     public static final String UTENTE_EXTRA="com.example.enrico.progettoium.Utente";
 
@@ -60,6 +60,14 @@ public class Menu extends AppCompatActivity {
             }
         });
 
+        preventivi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent preventivi = new Intent(Menu.this, Preventivi.class);
+                startActivity(preventivi);
+            }
+        });
+
         contatta_agenzia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,12 +85,10 @@ public class Menu extends AppCompatActivity {
                 startActivity(login);
             }
         });
+    }
 
-
-
-
-
-
-
+    public void changeState(int state){
+        if(state>-2 && state<2)
+            this.state=state;
     }
 }

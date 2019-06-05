@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VisualizzaPolizza">
+    tools:context=".Preventivi">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -20,98 +20,92 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_visualizza_polizza" />
-
+    <include layout="@layout/content_preventivi" />
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="0dp"
         android:background="@android:color/white">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
-            android:orientation="vertical"
-            android:id="@+id/linearLayout">
-
+            android:background="@android:color/white"
+            android:orientation="vertical">
 
             <android.support.v4.widget.Space
                 android:layout_width="match_parent"
-                android:layout_height="56dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@android:color/darker_gray"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/statoPolizza"
-                android:textSize="23dp"
-                android:gravity="center_horizontal"
-                android:textStyle="bold"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@android:color/darker_gray"/>
-
+                android:layout_height="55dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/infoVeicolo"
-                android:textSize="23dp"
-                android:textColor="@android:color/black"
-                />
+                android:text="Preventivi"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="@android:color/black"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Accessori aggiuntivi: "
-                android:textSize="18dp"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/accessori"
-                android:textSize="17dp"/>
-
-            <android.support.v4.widget.Space
-                android:layout_width="match_parent"
-                android:layout_height="25dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/totalePremio"
+                android:text="Nr. 1:   Fiat 500X\nTarga: FR852LP\nPrezzo € 709,00"
                 android:textSize="23dp"
-                android:textColor="@android:color/black"
-                />
-
-            <android.support.v4.widget.Space
-                android:layout_width="match_parent"
-                android:layout_height="15dp" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_green_light"
-                android:text="PAGA ORA"
-                android:textSize="24dp"
                 android:textStyle="bold"
-                android:visibility="gone"
-                android:id="@+id/pagaOra"
                 />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Nr. 2:   Alfa Mito\nTarga: DR829AS\nPrezzo € 639,00"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Nr. 3:   Volkswagen Golf\nTarga: CT936TV\nPrezzo € 454,00"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                app:srcCompat="@android:drawable/ic_input_add"
+                app:backgroundTint="#2eb82e"
+                app:fabSize="normal"
+                />
 
 
         </LinearLayout>
     </ScrollView>
+
+
 </android.support.design.widget.CoordinatorLayout>

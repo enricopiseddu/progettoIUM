@@ -2,7 +2,6 @@ package com.example.enrico.progettoium;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Polizza implements Serializable{
 
@@ -13,6 +12,9 @@ public class Polizza implements Serializable{
     private int meseScadenza;
     static private int classeMerito;
     private int numeroPolizza;
+
+    private boolean attiva;
+    private boolean inScadenza;
 
     private boolean assistenza_stradale=false;
     private boolean kasko=false;
@@ -162,5 +164,21 @@ public class Polizza implements Serializable{
 
     public void setNumeroPolizza(int numeroPolizza) {
         this.numeroPolizza = numeroPolizza;
+    }
+
+    public boolean isAttiva() {
+        return attiva;
+    }
+
+    public void setAttiva(boolean attiva) {
+        this.attiva = attiva;
+    }
+
+    public boolean isInScadenza() {
+        return inScadenza;
+    }
+
+    public void setInScadenza(boolean inScadenza) {
+        this.inScadenza = inScadenza;
     }
 }

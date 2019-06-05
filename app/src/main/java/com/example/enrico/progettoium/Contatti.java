@@ -71,8 +71,10 @@ public class Contatti extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                         if(testo_messaggio.getText().length()>0) {
-                            conferma_invio_messaggio.setVisibility(View.VISIBLE);
+
                             pulsante_invia_messaggio.setVisibility(View.GONE);
+                            Snackbar.make(v, "Il tuo messaggio è stato inviato", Snackbar.LENGTH_LONG)
+                                    .setAction("Action", null).show();
                         }
                         else
                             testo_messaggio.setError("Scrivi il messaggio");
@@ -126,7 +128,12 @@ public class Contatti extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     ok_selezione_orario.setVisibility(View.GONE);
-                    msg_conferma_orario.setVisibility(View.VISIBLE);
+
+
+                    Snackbar.make(v, "La tua richiesta è stata presa in carico\nVerrai ricontattato al " +
+                            "più presto", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+
                 }
             });
         }

@@ -8,4 +8,5 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_visualizza_polizza">VisualizzaPolizza</string>
     <string name="title_activity_modifica_polizza">ModificaPolizza</string>
+    <string name="title_activity_preventivi">Preventivi</string>
 </resources>

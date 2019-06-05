@@ -2,35 +2,30 @@ package com.example.enrico.progettoium;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.util.Date;
-
+import java.util.ArrayList;
 
 public class LeMiePolizze extends AppCompatActivity {
 
     Veicolo v1 = new Veicolo("Toyota Yaris", "EK729FG", 1400);
     Veicolo v2 = new Veicolo("Fiat Punto", "BN780AA", 1300);
     Veicolo v3 = new Veicolo("Lancia Ypsilon", "DE154LR", 1200 );
-    Polizza p1 = new Polizza(v1, 1520101, 10);
-    Polizza p2 = new Polizza(v2, 1478520, 10);
-    Polizza p3 = new Polizza(v3, 3250125, 10);
+    Polizza p1 = new Polizza(v1, 1, 10);
+    Polizza p2 = new Polizza(v2, 2, 10);
+    Polizza p3 = new Polizza(v3, 3, 10);
 
-
-
-    TextView modello_v1, modello_v2, modello_v3;
+    public TextView modello_v1, modello_v2, modello_v3;
     Button vedi1, vedi2, vedi3, modifica1, modifica2, modifica3;
 
     public static final String POLIZZA_EXTRA="com.example.enrico.progettoium.Polizza";
+    public static ArrayList<Polizza> polizze = new ArrayList<>(3);
 
+    public static int stato1=1, stato2=-1, stato3=0; //1:attiva, -1:scaduta, 0:in scadenza
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,16 +34,22 @@ public class LeMiePolizze extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         p1.setAnnoScadenza(2019);
         p1.setMeseScadenza(5);
+        p1.setAttiva(true);
+        p1.setInScadenza(false);
 
         p2.setAnnoScadenza(2018);
         p2.setMeseScadenza(12);
+        p2.setAttiva(false);
+        p2.setInScadenza(false);
 
         p3.setAnnoScadenza(2019);
         p3.setMeseScadenza(2);
+        p3.setAttiva(true);
+        p3.setInScadenza(true);
 
+        /** ACCESSORI **/
         p1.setKasko(true);
         p1.setGuida_esperta(true);
         p1.aggiornaAccessori();
@@ -61,10 +62,13 @@ public class LeMiePolizze extends AppCompatActivity {
         p3.setAssistenza_stradale(true);
         p3.aggiornaAccessori();
 
+        polizze.add(p1);
+        polizze.add(p2);
+        polizze.add(p3);
+
         modello_v1 = (TextView)findViewById(R.id.modello_v1);
         modello_v2 = (TextView)findViewById(R.id.modello_v2);
         modello_v3 = (TextView)findViewById(R.id.modello_v3);
-
 
         modello_v1.setText(p1.getVeicolo().getModello());
         modello_v1.setVisibility(View.VISIBLE);
@@ -74,6 +78,7 @@ public class LeMiePolizze extends AppCompatActivity {
 
         modello_v3.setText(p3.getVeicolo().getModello());
         modello_v3.setVisibility(View.VISIBLE);
+
 
 
         vedi1=(Button)findViewById(R.id.vedi1);
@@ -143,9 +148,5 @@ public class LeMiePolizze extends AppCompatActivity {
                 startActivity(modifica_polizza);
             }
         });
-
-
-
-
     }
 }

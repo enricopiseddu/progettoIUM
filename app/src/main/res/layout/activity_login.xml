@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -81,7 +79,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/password"
-
                 android:inputType="textPassword"
 
                 />
@@ -108,12 +105,12 @@
 
 
             <Button
+                android:id="@+id/accedi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/accedi"
+                android:background="@android:color/holo_green_light"
                 android:text="ACCEDI"
-                android:textSize="20dp"
-                android:background="@android:color/holo_green_light"/>
+                android:textSize="20dp" />
 
             <Space
                 android:layout_width="match_parent"
