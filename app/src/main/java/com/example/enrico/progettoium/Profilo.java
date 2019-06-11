@@ -79,8 +79,10 @@ public class Profilo extends AppCompatActivity {
                 utente.setNewNrCartaCredito(Long.valueOf(new_carta_credito));
                 utente.setNewNrTelefono(Long.valueOf(new_cellulare));
 
-                msg_aggiornamento_dati.setVisibility(View.VISIBLE);
+                Snackbar.make(v, "I tuoi dati sono stati aggiornati", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
 
+                salva_dati.setVisibility(View.GONE);
             }
         });
     }

@@ -2,6 +2,7 @@ package com.example.enrico.progettoium;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -143,7 +144,9 @@ public class ModificaPolizza extends AppCompatActivity {
         pulsanteAggiornaAccessori.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                msg_aggiornamento_accessori.setVisibility(View.VISIBLE);
+                Snackbar.make(v, "Gli accessori sono stati aggiornati", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+
             }
         });
     }

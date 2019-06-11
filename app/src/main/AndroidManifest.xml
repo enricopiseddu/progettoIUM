@@ -46,7 +46,10 @@
             android:name=".Preventivi"
             android:label="@string/title_activity_preventivi"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Pagamento"></activity>
+        <activity
+            android:name=".Pagamento"
+            android:label="Pagamento"
+            android:windowSoftInputMode="stateHidden"></activity>
     </application>
 
 </manifest>

@@ -42,7 +42,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="0dp"
-                android:layout_marginTop="328dp"
+                android:layout_marginTop="359dp"
                 android:background="@android:color/darker_gray" />
 
             <View
@@ -50,12 +50,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
                 android:layout_marginTop="208dp"
-                android:background="@android:color/darker_gray"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="0dp" />
+                android:background="@android:color/darker_gray" />
 
             <View
                 android:id="@+id/view10"
@@ -64,9 +64,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
                 android:layout_marginTop="43dp"
                 android:background="@android:color/darker_gray"
-                android:layout_marginLeft="0dp"
                 tools:ignore="RtlCompat" />
 
             <TextView
@@ -80,6 +80,7 @@
                 android:layout_marginLeft="12dp"
                 android:layout_marginTop="3dp"
                 android:text="  Riepilogo Pagamento"
+                android:textColor="@android:color/black"
                 android:textSize="25dp" />
 
             <TextView
@@ -122,7 +123,9 @@
                 android:layout_alignStart="@+id/modVeicolo"
                 android:layout_alignLeft="@+id/modVeicolo"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="149dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="175dp"
                 android:text="TOTALE € " />
 
             <Button
@@ -137,7 +140,8 @@
                 android:layout_marginBottom="0dp"
                 android:backgroundTint="@android:color/holo_green_light"
                 android:text="PAGA LA POLIZZA"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:id="@+id/paga"/>
 
             <TextView
                 android:id="@+id/modelloVeicolo"
@@ -186,7 +190,7 @@
                 android:layout_alignTop="@+id/targaVeicolo"
                 android:layout_marginStart="1dp"
                 android:layout_marginLeft="1dp"
-                android:layout_marginTop="66dp"
+                android:layout_marginTop="92dp"
                 android:text="TextView"
                 android:textStyle="bold" />
 
@@ -197,21 +201,22 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="26dp"
-                android:layout_marginLeft="26dp"
-                android:layout_marginTop="181dp"
-                android:text="Inserire i dati della Carta" />
+                android:layout_marginStart="27dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="223dp"
+                android:text="Inserisci i dati della carta"
+                android:textColor="@android:color/black" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
                 android:layout_marginTop="208dp"
-                android:background="@android:color/darker_gray"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="0dp" />
+                android:background="@android:color/darker_gray" />
 
             <TextView
                 android:id="@+id/textView14"
@@ -220,13 +225,13 @@
                 android:layout_alignStart="@+id/modVeicolo"
                 android:layout_alignLeft="@+id/modVeicolo"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="217dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="268dp"
                 android:text="Carta" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/nr_carta"
                 android:layout_width="144dp"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/textView14"
@@ -244,9 +249,12 @@
                 android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/editText2"
+                android:layout_below="@+id/nr_carta"
                 android:layout_alignStart="@+id/textView14"
                 android:layout_alignLeft="@+id/textView14"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="-3dp"
                 android:text="Scadenza" />
 
             <EditText
@@ -254,9 +262,9 @@
                 android:layout_width="44dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView14"
-                android:layout_marginStart="-30dp"
-                android:layout_marginLeft="-30dp"
-                android:layout_marginTop="-5dp"
+                android:layout_marginStart="-25dp"
+                android:layout_marginLeft="-25dp"
+                android:layout_marginTop="-4dp"
                 android:layout_toEndOf="@+id/modVeicolo"
                 android:layout_toRightOf="@+id/modVeicolo"
                 android:ems="10"
@@ -283,7 +291,7 @@
                 android:layout_alignTop="@+id/textView16"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="-15dp"
+                android:layout_marginTop="-12dp"
                 android:layout_marginEnd="171dp"
                 android:layout_marginRight="171dp"
                 android:ems="10"
@@ -299,8 +307,8 @@
                 android:layout_alignEnd="@+id/textView15"
                 android:layout_alignRight="@+id/textView15"
                 android:layout_marginTop="2dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginRight="0dp"
+                android:layout_marginEnd="-1dp"
+                android:layout_marginRight="-1dp"
                 android:text="CCV" />
 
             <EditText
@@ -310,25 +318,51 @@
                 android:layout_below="@+id/textView15"
                 android:layout_alignStart="@+id/meseScadenzaCarta"
                 android:layout_alignLeft="@+id/meseScadenzaCarta"
-                android:layout_marginStart="1dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginTop="-7dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="-3dp"
                 android:ems="10"
                 android:hint="xxx"
                 android:inputType="number"
                 android:textSize="15dp" />
 
-            <CheckBox
-                android:id="@+id/checkBox5"
+            <TextView
+                android:id="@+id/datiInformativi"
                 android:layout_width="wrap_content"
-                android:layout_height="381dp"
+                android:layout_height="125dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="21dp"
-                android:layout_marginLeft="21dp"
-                android:layout_marginBottom="0dp"
-                android:text="Ricorda per acquisti futuri" />
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginBottom="22dp"
+                android:text="Il sottoscritto contraente, dichiara di aver preso visione delle clausole indicate nel foglio illustrativo disponibile al link: www.allianz.it/clausole_polizze"
+                android:textAlignment="center"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView13"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="-85dp"
+                android:layout_marginTop="145dp"
+                android:text="Prossimo rinnovo:"
+                android:layout_alignLeft="@+id/textView13"
+                android:layout_marginLeft="-85dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="151dp"
+                android:layout_marginLeft="151dp"
+                android:layout_marginTop="144dp"
+                android:text="29/05/2020" />
 
         </RelativeLayout>
     </ScrollView>
