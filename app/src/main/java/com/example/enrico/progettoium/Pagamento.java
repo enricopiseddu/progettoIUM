@@ -2,6 +2,7 @@ package com.example.enrico.progettoium;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,10 +21,10 @@ public class Pagamento extends AppCompatActivity {
     TextView modelloVeicolo, targaVeicolo, listaAccessori, prezzoDaPagare, datiInformativi;
     EditText numeroCarta, meseScadenza, annoScadenza, codiceCCV;
 
-    String numero_carta, mese_scadenza, anno_scadenza, codice_ccv;
 
     Button pagaOra;
     String lista_acc;
+
     public static final String POLIZZA_EXTRA="com.example.enrico.progettoium.Polizza";
 
     @Override
@@ -58,16 +59,17 @@ public class Pagamento extends AppCompatActivity {
 
         lista_acc =polizza.getAccessori().toString();
         listaAccessori.setText(Html.fromHtml("<u>"+lista_acc+"</u>"));
+        datiInformativi.setText(Html.fromHtml("Il sottoscritto contraente, dichiara di aver preso visione delle clausole indicate nel foglio illustrativo disponibile al link: " + "<u>" + "www.allianz.it/clausole_polizze" +"</u>"));
 
 
         pagaOra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                numero_carta = numeroCarta.getText().toString();
+                /*numero_carta = numeroCarta.getText().toString();
                 mese_scadenza = meseScadenza.getText().toString();
                 anno_scadenza = annoScadenza.getText().toString();
-                codice_ccv = codiceCCV.getText().toString();
+                codice_ccv = codiceCCV.getText().toString();*/
 
                 if (checkInput()){
                     Snackbar.make(v, "Il pagamento è avvenuto con successo!", Snackbar.LENGTH_LONG)
@@ -77,6 +79,7 @@ public class Pagamento extends AppCompatActivity {
                     datiInformativi.setText("Il pagamento è stato effettuato e la polizza è stata correttamente " +
                             "attivata. Riceverai una mail di conferma con allegata la ricevuta");
                     datiInformativi.setTextColor(Color.rgb(0,204,0));
+                    datiInformativi.setClickable(false);
                 }
 
             }
@@ -94,6 +97,14 @@ public class Pagamento extends AppCompatActivity {
 
 
 
+        datiInformativi.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.allianz.it"));
+                    startActivity(intent); }
+        });
+
+
 
     }
 
@@ -101,28 +112,36 @@ public class Pagamento extends AppCompatActivity {
 
         int errors=0;
 
-        if (numero_carta == null || numero_carta.length()!=16) {
+        if (numeroCarta.getText() == null || numeroCarta.getText().length()!=16) {
             errors++;
             numeroCarta.setError("Inserisci un numero di carta valido");
         }
         else
             numeroCarta.setError(null);
 
-        if (/*meseScadenza.getText() == null || */Integer.valueOf(mese_scadenza)>12 || Integer.valueOf(mese_scadenza)<1) {
+        if (meseScadenza.getText() == null || meseScadenza.getText().length()==0){
             errors++;
             meseScadenza.setError("Inserisci un mese valido");
         }
-        else
-            meseScadenza.setError(null);
+        else {
+            if(Integer.valueOf(meseScadenza.getText().toString())>12 || Integer.valueOf(meseScadenza.getText().toString())<1 )
+                meseScadenza.setError("Inserisci un mese valido");
+            else
+                meseScadenza.setError(null);
+        }
 
-        if (/*annoScadenza.getText() == null || */Integer.valueOf(anno_scadenza)>2050 || Integer.valueOf(anno_scadenza)<2019) {
+        if (annoScadenza.getText() == null || annoScadenza.getText().length()==0){
             errors++;
             annoScadenza.setError("Inserisci un anno valido");
         }
-        else
-            annoScadenza.setError(null);
+        else{
+            if(Integer.valueOf(annoScadenza.getText().toString())>2029 || Integer.valueOf(annoScadenza.getText().toString())<2019 )
+                annoScadenza.setError("Inserisci un anno valido");
+            else
+                annoScadenza.setError(null);
+        }
 
-        if (codice_ccv == null || codice_ccv.length()!=3) {
+        if (codiceCCV.getText() == null || codiceCCV.getText().length()!=3) {
             errors++;
             codiceCCV.setError("Inserisci un codice CCV valido");
         }

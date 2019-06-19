@@ -147,6 +147,8 @@ public class ModificaPolizza extends AppCompatActivity {
                 Snackbar.make(v, "Gli accessori sono stati aggiornati", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
+
+
             }
         });
     }
