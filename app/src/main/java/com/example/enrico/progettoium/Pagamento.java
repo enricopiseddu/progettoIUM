@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 
 import java.io.Serializable;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Pagamento extends AppCompatActivity {
 
@@ -72,14 +74,22 @@ public class Pagamento extends AppCompatActivity {
                 codice_ccv = codiceCCV.getText().toString();*/
 
                 if (checkInput()){
-                    Snackbar.make(v, "Il pagamento è avvenuto con successo!", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
 
                     pagaOra.setVisibility(View.GONE);
                     datiInformativi.setText("Il pagamento è stato effettuato e la polizza è stata correttamente " +
-                            "attivata. Riceverai una mail di conferma con allegata la ricevuta");
+                            "attivata. Riceverai una mail di conferma con allegata la ricevuta.\nTra qualche istante verrai reindirizzato al menù principale");
                     datiInformativi.setTextColor(Color.rgb(0,204,0));
                     datiInformativi.setClickable(false);
+
+                    new Timer().schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            // this code will be executed after 2 seconds
+                            Intent i = new Intent(Pagamento.this,
+                                    Menu.class);
+                            startActivity(i);
+                        }
+                    }, 7000);
                 }
 
             }
@@ -125,7 +135,10 @@ public class Pagamento extends AppCompatActivity {
         }
         else {
             if(Integer.valueOf(meseScadenza.getText().toString())>12 || Integer.valueOf(meseScadenza.getText().toString())<1 )
+            {
                 meseScadenza.setError("Inserisci un mese valido");
+                errors++;
+            }
             else
                 meseScadenza.setError(null);
         }
@@ -136,7 +149,10 @@ public class Pagamento extends AppCompatActivity {
         }
         else{
             if(Integer.valueOf(annoScadenza.getText().toString())>2029 || Integer.valueOf(annoScadenza.getText().toString())<2019 )
+            {
                 annoScadenza.setError("Inserisci un anno valido");
+                errors++;
+            }
             else
                 annoScadenza.setError(null);
         }

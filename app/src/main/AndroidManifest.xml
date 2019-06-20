@@ -49,7 +49,9 @@
         <activity
             android:name=".Pagamento"
             android:label="Pagamento"
-            android:windowSoftInputMode="stateHidden"></activity>
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".NuovoPreventivo"
+            android:windowSoftInputMode="stateHidden" />/>
     </application>
 
 </manifest>

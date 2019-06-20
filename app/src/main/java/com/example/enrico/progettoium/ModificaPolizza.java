@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.Switch;
 import android.widget.TextView;
 import java.io.Serializable;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class ModificaPolizza extends AppCompatActivity {
 
@@ -19,6 +21,7 @@ public class ModificaPolizza extends AppCompatActivity {
     Button pulsanteAggiornaAccessori;
 
     int prezzoAccessori=0;
+    public static final String POLIZZA_EXTRA="com.example.enrico.progettoium.Polizza";
 
 
     @Override
@@ -144,9 +147,19 @@ public class ModificaPolizza extends AppCompatActivity {
         pulsanteAggiornaAccessori.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(v, "Gli accessori sono stati aggiornati", Snackbar.LENGTH_LONG)
+                pulsanteAggiornaAccessori.setVisibility(View.GONE);
+                Snackbar.make(v, "Accessori aggiornati. Tra qualche secondo potrai confermare le modifiche apportate", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-
+                new Timer().schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        // this code will be executed after 2 seconds
+                        Intent i = new Intent(ModificaPolizza.this,
+                                Pagamento.class);
+                        i.putExtra(POLIZZA_EXTRA, polizza);
+                        startActivity(i);
+                    }
+                }, 4000);
 
 
             }
@@ -189,4 +202,5 @@ public class ModificaPolizza extends AppCompatActivity {
             prezzoAccessori+=90;
         }
     }
+
 }

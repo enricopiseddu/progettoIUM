@@ -1,5 +1,6 @@
 package com.example.enrico.progettoium;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,6 +24,10 @@ public class Preventivi extends AppCompatActivity {
 
                 Snackbar.make(view, "Errore durante la richiesta di\nun nuovo preventivo!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
+                Intent i = new Intent(Preventivi.this,
+                        NuovoPreventivo.class);
+                startActivity(i);
             }
         });
     }
