@@ -16,7 +16,7 @@ import java.util.TimerTask;
 public class ModificaPolizza extends AppCompatActivity {
 
     Polizza polizza;
-    TextView datiVeicolo, totaleAccessori, msg_aggiornamento_accessori;
+    TextView datiVeicolo, totaleAccessori, msg_aggiornamento_accessori, auto;
     Switch assistenzaStradale, cristalli, furto, guidaEsperta, incendio ,kasko;
     Button pulsanteAggiornaAccessori;
 
@@ -28,19 +28,29 @@ public class ModificaPolizza extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modifica_polizza);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_stat_name);
+        toolbar.setTitle("Modifica polizza");// your drawable
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed(); // Implemented by activity
+            }
+        });
 
         Intent intent = getIntent();
         Serializable obj = intent.getSerializableExtra(LeMiePolizze.POLIZZA_EXTRA);
 
         polizza=(Polizza)obj;
 
-        datiVeicolo=(TextView)findViewById(R.id.datiVeicolo);
+       // datiVeicolo=(TextView)findViewById(R.id.datiVeicolo);
+        auto = findViewById(R.id.autoDaModificare);
+        auto.setText(polizza.getVeicolo().getModello()+", "+polizza.getVeicolo().getTarga());
 
-        datiVeicolo.setText("Polizza nr°: "+ polizza.getNumeroPolizza() +
-                            "\nVeicolo:       " + polizza.getVeicolo().getModello() +
-                            "\nTarga:          " + polizza.getVeicolo().getTarga());
+        //datiVeicolo.setText("Polizza nr°: "+ polizza.getNumeroPolizza() +
+              //              "\nVeicolo:       " + polizza.getVeicolo().getModello() +
+                 //           "\nTarga:          " + polizza.getVeicolo().getTarga());
 
 
         totaleAccessori=(TextView)findViewById(R.id.totaleAccessori);

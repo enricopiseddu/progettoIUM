@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".Login"
+    android:padding="@dimen/padding_12"
+    android:background="@android:color/white">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -31,21 +33,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="14dp" />
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Login"
-                android:textColor="@android:color/black"
-                android:textSize="34dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="53dp" />
 
             <Space
                 android:layout_width="match_parent"
@@ -55,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" Username"
-                android:textSize="25dp" />
+                android:textSize="20dp" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -73,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" Password"
-                android:textSize="25dp"/>
+                android:textSize="20dp"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -101,7 +89,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                android:layout_height="30dp" />
 
 
             <Button

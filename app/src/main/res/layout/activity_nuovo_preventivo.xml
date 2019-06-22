@@ -4,7 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Contatti">
+    tools:context=".Contatti"
+    android:padding="@dimen/padding_12"
+    android:background="@android:color/white"
+    >
+
+
 
     <View
         android:id="@+id/view7"
@@ -32,32 +37,14 @@
             android:background="@android:color/white"
             android:orientation="vertical">
 
-
-            <View
-                android:id="@+id/view10"
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="43dp"
-                android:background="@android:color/darker_gray"
-                tools:ignore="RtlCompat" />
+                android:layout_height="?attr/actionBarSize"
+                android:background="#84A8C4"
+                android:navigationIcon="@drawable/ic_stat_name"
+                app:title="Il mio profilo" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_gravity="center"
-                android:layout_marginStart="12dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginTop="3dp"
-                android:text="Richiesta nuovo preventivo"
-                android:textColor="@android:color/black"
-                android:textSize="25dp" />
 
             <TextView
                 android:id="@+id/modVeicolo"
@@ -68,7 +55,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="25dp"
                 android:layout_marginLeft="25dp"
-                android:layout_marginTop="51dp"
+                android:layout_marginTop="103dp"
                 android:text="Targa:" />
 
             <TextView
@@ -80,19 +67,20 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="0dp"
-                android:layout_marginTop="90dp"
+                android:layout_marginTop="141dp"
                 android:text="Decorrenza" />
 
             <TextView
 
+                android:id="@+id/frazionamento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="25dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="136dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="178dp"
                 android:text="Frazionamento:" />
 
             <Button
@@ -108,7 +96,9 @@
                 android:layout_marginBottom="0dp"
                 android:backgroundTint="@android:color/holo_green_light"
                 android:text="INVIA RICHIESTA"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:drawableRight="@drawable/outline_send_black_36dp"
+                />
 
             <TextView
                 android:id="@+id/textView13"
@@ -117,9 +107,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="26dp"
-                android:layout_marginLeft="26dp"
-                android:layout_marginTop="186dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="229dp"
                 android:text="Opzioni aggiuntive all' RCA standard:"
                 android:textColor="@android:color/black" />
 
@@ -131,7 +121,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="0dp"
-                android:layout_marginTop="174dp"
+                android:layout_marginTop="217dp"
                 android:background="@android:color/darker_gray" />
 
             <View
@@ -143,7 +133,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="0dp"
-                android:layout_marginTop="317dp"
+                android:layout_marginTop="374dp"
                 android:background="@android:color/darker_gray" />
 
             <EditText
@@ -153,9 +143,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="37dp"
-                android:layout_marginEnd="44dp"
-                android:layout_marginRight="44dp"
+                android:layout_marginTop="87dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginRight="22dp"
                 android:ems="10"
                 android:hint="AB123CD"
                 android:inputType="textCapCharacters" />
@@ -167,12 +157,11 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="74dp"
-                android:layout_marginEnd="44dp"
-                android:layout_marginRight="44dp"
-                android:ems="10"
+                android:layout_marginTop="122dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginRight="21dp"
                 android:editable="false"
-                />
+                android:ems="10" />
 
             <Spinner
                 android:id="@+id/spinner"
@@ -181,9 +170,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="121dp"
-                android:layout_marginEnd="78dp"
-                android:layout_marginRight="78dp" />
+                android:layout_marginTop="169dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp" />
 
             <CheckBox
                 android:id="@+id/checkBox"
@@ -192,9 +181,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="25dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="216dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="256dp"
                 android:text="Assistenza Stradale" />
 
             <CheckBox
@@ -204,9 +193,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="25dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="247dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="291dp"
                 android:text="Cristalli" />
 
             <CheckBox
@@ -216,9 +205,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="25dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="277dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="330dp"
                 android:text="Furto" />
 
             <CheckBox
@@ -228,9 +217,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="201dp"
-                android:layout_marginLeft="201dp"
-                android:layout_marginTop="217dp"
+                android:layout_marginStart="205dp"
+                android:layout_marginLeft="205dp"
+                android:layout_marginTop="258dp"
                 android:text="Guida Esperta" />
 
             <CheckBox
@@ -240,9 +229,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="201dp"
-                android:layout_marginLeft="201dp"
-                android:layout_marginTop="248dp"
+                android:layout_marginStart="205dp"
+                android:layout_marginLeft="205dp"
+                android:layout_marginTop="293dp"
                 android:text="Incendio" />
 
             <CheckBox
@@ -252,9 +241,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="202dp"
-                android:layout_marginLeft="202dp"
-                android:layout_marginTop="279dp"
+                android:layout_marginStart="206dp"
+                android:layout_marginLeft="206dp"
+                android:layout_marginTop="329dp"
                 android:text="Kasko" />
 
             <CheckBox
@@ -264,9 +253,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="25dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="347dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="387dp"
                 android:text="Il sottoscritto contraente dichiara di non avere mai avuto  la patente sospesa negli ultimi 5 anni" />
 
         </RelativeLayout>

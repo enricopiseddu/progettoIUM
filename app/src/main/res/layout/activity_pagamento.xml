@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Contatti">
+    tools:context=".Contatti"
+    android:padding="@dimen/padding_12"
+    android:background="@android:color/white">
 
     <View
         android:id="@+id/view7"
@@ -237,9 +239,9 @@
                 android:layout_alignTop="@+id/textView14"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="-12dp"
-                android:layout_marginEnd="141dp"
-                android:layout_marginRight="141dp"
+                android:layout_marginTop="-13dp"
+                android:layout_marginEnd="115dp"
+                android:layout_marginRight="115dp"
                 android:ems="10"
                 android:hint="xxxx xxxx xxxx xxxx"
                 android:inputType="number"
@@ -279,9 +281,9 @@
                 android:layout_alignStart="@+id/modelloVeicolo"
                 android:layout_alignLeft="@+id/modelloVeicolo"
                 android:layout_alignBottom="@+id/textView15"
-                android:layout_marginStart="-11dp"
-                android:layout_marginLeft="-11dp"
-                android:layout_marginBottom="0dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="-5dp"
                 android:text="/" />
 
             <EditText
@@ -291,9 +293,9 @@
                 android:layout_alignTop="@+id/textView16"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="-12dp"
-                android:layout_marginEnd="171dp"
-                android:layout_marginRight="171dp"
+                android:layout_marginTop="-16dp"
+                android:layout_marginEnd="123dp"
+                android:layout_marginRight="123dp"
                 android:ems="10"
                 android:hint="yyyy"
                 android:inputType="number"

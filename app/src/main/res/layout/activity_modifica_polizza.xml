@@ -4,21 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ModificaPolizza">
+    tools:context=".ModificaPolizza"
+    android:padding="@dimen/padding_12"
+    android:background="@android:color/white"
+    >
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_modifica_polizza" />
     <ScrollView
@@ -36,26 +27,29 @@
             android:orientation="vertical"
             android:id="@+id/linearLayout">
 
-            <android.support.v4.widget.Space
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="55dp" />
+                android:layout_height="?attr/actionBarSize"
+                android:background="#84A8C4"
+                android:navigationIcon="@drawable/ic_stat_name"
+                app:title="Modifica Polizza"
+                />
+
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Modifica Polizza"
                 android:textStyle="bold"
-                android:textSize="25dp"
-                android:textColor="@android:color/black"/>
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                android:id="@+id/autoDaModificare"
+                />
             <android.support.v4.widget.Space
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textSize="23dp"
-                android:id="@+id/datiVeicolo"
-                />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
@@ -135,10 +129,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textSize="17dp"
+                android:textSize="22dp"
                 android:textStyle="bold"
+                android:textColor="@android:color/black"
                 android:id="@+id/totaleAccessori"
                 android:gravity="center_horizontal"/>
+            
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

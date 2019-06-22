@@ -25,13 +25,21 @@ public class VisualizzaPolizza extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visualizza_polizza);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
         Serializable obj = intent.getSerializableExtra(LeMiePolizze.POLIZZA_EXTRA);
 
             polizza=(Polizza)obj;
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_stat_name);
+        toolbar.setTitle("Dettaglio polizza");// your drawable
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed(); // Implemented by activity
+            }
+        });
 
 
         infoVeicolo=(TextView)findViewById(R.id.infoVeicolo);

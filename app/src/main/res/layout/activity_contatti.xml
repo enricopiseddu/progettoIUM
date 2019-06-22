@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Contatti">
+    tools:context=".Contatti"
+    android:padding="@dimen/padding_12"
+    android:background="@android:color/white"
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+    >
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"/>
     <include layout="@layout/content_contatti" />
 
     <ScrollView
         android:id="@+id/scrollView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="362dp"
+        android:layout_height="469dp"
         android:layout_alignParentTop="true"
         android:background="@android:color/white">
 
@@ -36,17 +32,23 @@
             android:background="@android:color/white"
             android:orientation="vertical">
 
-
-            <android.support.v4.widget.Space
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="55dp" />
+                android:layout_height="?attr/actionBarSize"
+                android:background="#84A8C4"
+                android:navigationIcon="@drawable/ic_stat_name"
+                app:title="Contatti"
+                />
+
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="  Per contattare la tua Agenzia,\n    scegli uno di questi metodi"
-                android:textSize="25dp" />
+                android:layout_gravity="center_horizontal"
+                android:text="   Per contattare la tua Agenzia,\n     scegli uno di questi metodi"
+                android:textSize="23dp" />
+
             <android.support.v4.widget.Space
                 android:layout_width="match_parent"
                 android:layout_height="35dp" />
@@ -54,118 +56,118 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                        <!-- SCRIVI MESSAGGIO ALL'AGENZIA-->
-                        <RadioButton
-                            android:id="@+id/scelta_invia_messaggio"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Invia Messaggio"
-                            android:textStyle="bold"
-                            android:textSize="18dp"
-                            />
+                <!-- SCRIVI MESSAGGIO ALL'AGENZIA-->
+                <RadioButton
+                    android:id="@+id/scelta_invia_messaggio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Invia Messaggio"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/scrivi_messaggio"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=" Scrivi messaggio:"
-                            android:visibility="gone"
-                            />
+                <TextView
+                    android:id="@+id/scrivi_messaggio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Scrivi messaggio:"
+                    android:visibility="gone" />
 
-                        <EditText
-                            android:id="@+id/testo_messaggio"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="textLongMessage"
-                            android:visibility="gone"/>
+                <EditText
+                    android:id="@+id/testo_messaggio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textLongMessage"
+                    android:visibility="gone" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/conferma_invio_messaggio"
-                            android:text=" Il tuo messaggio è stato inviato!\n Controlla la tua casella di posta"
-                            android:textColor="@android:color/holo_green_dark"
-                            android:visibility="gone"
-                            android:layout_gravity="center_horizontal"/>
+                <TextView
+                    android:id="@+id/conferma_invio_messaggio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text=" Il tuo messaggio è stato inviato!\n Controlla la tua casella di posta"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:visibility="gone" />
 
-                        <Button
-                            android:layout_width="127dp"
-                            android:layout_height="match_parent"
-                            android:text="INVIA"
-                            android:layout_marginLeft="225dp"
-                            android:id="@+id/pulsante_invia_messaggio"
-                            android:visibility="gone"/>
+                <Button
+                    android:id="@+id/pulsante_invia_messaggio"
+                    android:layout_width="127dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="210dp"
+                    android:text="INVIA"
+                    android:visibility="gone" />
 
-                        <!-- CHIAMA AGENZIA-->
-                        <android.support.v4.widget.Space
-                            android:layout_width="match_parent"
-                            android:layout_height="25dp" />
+                <!-- CHIAMA AGENZIA-->
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
 
-                        <RadioButton
-                            android:id="@+id/scelta_chiama_agenzia"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Chiama Agenzia"
-                            android:textStyle="bold"
-                            android:textSize="18dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="070 51 05 115"
-                            android:textSize="25dp"
-                            android:textStyle="bold"
-                            android:textColor="@android:color/holo_blue_dark"
-                            android:visibility="gone"
-                            android:id="@+id/numero_tel_agenzia"
-                            android:layout_gravity="center_horizontal"
-                            />
+                <RadioButton
+                    android:id="@+id/scelta_chiama_agenzia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chiama Agenzia"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
 
-                        <android.support.v4.widget.Space
-                            android:layout_width="match_parent"
-                            android:layout_height="25dp" />
-                        <!-- VOGLIO ESSERE RICONTATTATO-->
-                        <RadioButton
-                            android:id="@+id/scelta_voglio_essere_ricontattato"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Voglio essere ricontattato"
-                            android:textStyle="bold"
-                            android:textSize="18dp"
-                            />
+                <TextView
+                    android:id="@+id/numero_tel_agenzia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="070 51 05 115"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" In quale fascia oraria desideri essere contattato? "
-                            android:id="@+id/msg_fascia_oraria"
-                            android:visibility="gone"
-                            android:layout_gravity="center_horizontal"
-                            android:textColor="@android:color/black"
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+                <!-- VOGLIO ESSERE RICONTATTATO-->
+                <RadioButton
+                    android:id="@+id/scelta_voglio_essere_ricontattato"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Voglio essere ricontattato"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
 
-                            />
-                        <Spinner
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:id="@+id/fascia_oraria"
-                            android:visibility="gone"
-                            android:layout_gravity="center_horizontal"
+                <TextView
+                    android:id="@+id/msg_fascia_oraria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text=" In quale fascia oraria desideri essere contattato? "
+                    android:textColor="@android:color/black"
+                    android:visibility="gone"
 
-                        />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="La tua richiesta è stata presa in carico.\n    Verrai ricontattato al più presto"
-                            android:textColor="@android:color/holo_green_dark"
-                            android:layout_gravity="center_horizontal"
-                            android:visibility="gone"
-                            android:id="@+id/msg_conferma_orario"/>
-                        <Button
-                            android:layout_width="300dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:text="CONFERMA"
-                            android:id="@+id/ok_selezione_orario"
-                            android:visibility="gone"/>
+                    />
+
+                <Spinner
+                    android:id="@+id/fascia_oraria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+
+                    />
+
+                <TextView
+                    android:id="@+id/msg_conferma_orario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:text="La tua richiesta è stata presa in carico.\n    Verrai ricontattato al più presto"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/ok_selezione_orario"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="CONFERMA"
+                    android:visibility="gone" />
             </RadioGroup>
         </LinearLayout>
     </ScrollView>

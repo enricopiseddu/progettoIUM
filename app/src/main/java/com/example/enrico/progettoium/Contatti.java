@@ -32,8 +32,16 @@ public class Contatti extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contatti);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_stat_name);
+        toolbar.setTitle("Contatti");// your drawable
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed(); // Implemented by activity
+            }
+        });
 
         scrivi_messaggio = (TextView) findViewById(R.id.scrivi_messaggio);
         testo_messaggio = (EditText) findViewById(R.id.testo_messaggio);

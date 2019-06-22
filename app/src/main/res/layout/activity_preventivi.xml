@@ -4,21 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Preventivi">
+    tools:context=".Preventivi"
+    android:padding="@dimen/padding_12"
+    android:background="@android:color/white">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_preventivi" />
     <ScrollView
@@ -37,17 +26,15 @@
             android:background="@android:color/white"
             android:orientation="vertical">
 
-            <android.support.v4.widget.Space
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="55dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Preventivi"
-                android:layout_gravity="center_horizontal"
-                android:textStyle="bold"
-                android:textSize="25dp"
-                android:textColor="@android:color/black"/>
+                android:layout_height="?attr/actionBarSize"
+                android:background="#84A8C4"
+                android:navigationIcon="@drawable/ic_stat_name"
+                app:title="Il mio profilo" />
+
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
@@ -56,9 +43,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Nr. 1:   Fiat 500X\nTarga: FR852LP\nPrezzo € 709,00"
+                android:text="Nr. 1:        Fiat 500X\nTarga:      FR852LP"
                 android:textSize="23dp"
                 android:textStyle="bold"
+                android:id="@+id/preventivo1"
                 />
 
             <View
@@ -69,9 +57,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Nr. 2:   Alfa Mito\nTarga: DR829AS\nPrezzo € 639,00"
+                android:text="Nr. 2:        Alfa Mito\nTarga:      DR829AS"
                 android:textSize="23dp"
                 android:textStyle="bold"
+                android:id="@+id/preventivo2"
                 />
 
             <View
@@ -82,9 +71,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Nr. 3:   Volkswagen Golf\nTarga: CT936TV\nPrezzo € 454,00"
+                android:text="Nr. 3:        Volkswagen Golf\nTarga:      CT936TV"
                 android:textSize="23dp"
                 android:textStyle="bold"
+                android:id="@+id/preventivo3"
                 />
 
             <View

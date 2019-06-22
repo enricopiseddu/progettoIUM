@@ -28,7 +28,14 @@ public class Profilo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profilo);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_stat_name);
+        toolbar.setTitle("Il mio profilo");// your drawable
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed(); // Implemented by activity
+            }
+        });
 
         nome_cognome = (TextView)findViewById(R.id.nome_cognome);
         indirizzo=(EditText)findViewById(R.id.indirizzo);
@@ -82,7 +89,7 @@ public class Profilo extends AppCompatActivity {
                 Snackbar.make(v, "I tuoi dati sono stati aggiornati", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
-                salva_dati.setVisibility(View.GONE);
+                //salva_dati.setVisibility(View.GONE);
             }
         });
     }

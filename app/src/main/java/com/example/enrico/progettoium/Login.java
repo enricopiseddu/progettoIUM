@@ -93,6 +93,8 @@ public class Login extends AppCompatActivity {
                     if(actualUser==null) {
                         autenticazioneFallita = (TextView) findViewById(R.id.autenticazioneFallita);
                         autenticazioneFallita.setVisibility(View.VISIBLE);
+                        username.setError("Errore Username");
+                        password.setError("Errore Password");
                     }
                 }
             }
