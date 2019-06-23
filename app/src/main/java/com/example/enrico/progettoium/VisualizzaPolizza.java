@@ -113,7 +113,7 @@ public class VisualizzaPolizza extends AppCompatActivity {
         pagaOra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                aggiornaIcona(1);
+                //aggiornaIcona(1);
                 //pagaOra.setVisibility(View.GONE);
                 Intent pagamento = new Intent(VisualizzaPolizza.this,
                         Pagamento.class);

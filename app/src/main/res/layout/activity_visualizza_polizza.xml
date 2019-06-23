@@ -36,10 +36,6 @@
                 app:title="Modifica Polizza"
                 />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@android:color/darker_gray"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

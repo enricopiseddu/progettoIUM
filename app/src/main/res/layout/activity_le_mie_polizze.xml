@@ -37,7 +37,7 @@
                 android:visibility="gone"
                 android:textSize="22dp"
 
-                android:drawableLeft="@drawable/icona_verde_polizza"
+                android:drawableLeft="@drawable/ok_check"
                 android:layout_marginLeft="1dp"/>
 
             <Button
@@ -64,7 +64,7 @@
                 android:id="@+id/modello_v2"
                 android:textSize="22dp"
                 android:visibility="gone"
-                android:drawableLeft="@drawable/icona_rossa_polizza"/>
+                android:drawableLeft="@drawable/error"/>
             <Button
                 android:layout_width="200dp"
                 android:layout_height="50dp"
@@ -89,7 +89,7 @@
                 android:id="@+id/modello_v3"
                 android:visibility="gone"
                 android:textSize="22dp"
-                android:drawableLeft="@drawable/icona_gialla_polizza"/>
+                android:drawableLeft="@drawable/yellow_alert"/>
             <Button
                 android:layout_width="200dp"
                 android:layout_height="50dp"

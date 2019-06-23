@@ -60,7 +60,10 @@
             android:windowSoftInputMode="stateHidden"
             android:theme="@style/AppTheme.NoActionBar"/>
         />
-        <activity android:name=".MostraPreventivo"></activity>
+        <activity android:name=".MostraPreventivo"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>
