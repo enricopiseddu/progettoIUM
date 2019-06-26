@@ -38,9 +38,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:text="Dati Veicolo"
                 android:textSize="22dp"
-                android:textColor="@android:color/black"/>
+                />
 
 
             <TextView
@@ -48,7 +49,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/datiVeicoloMostraPreventivo"
                 android:text="Targa ... "
-                android:textSize="22dp" />
+                android:textSize="22dp"
+                android:textColor="@android:color/black"/>
 
             <View
                 android:layout_width="match_parent"
@@ -63,6 +65,42 @@
                 android:textStyle="bold"
                 android:textSize="19dp" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ACCETTA PREVENTIVO"
+                android:id="@+id/accettaPreventivo"
+                android:background="@android:color/holo_green_light"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:drawableLeft="@drawable/baseline_done_outline_black_36dp"
+
+                />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/rifiutaPreventivo"
+
+                android:layout_height="wrap_content"
+                android:text="ELIMINA PREVENTIVO"
+                android:drawableLeft="@drawable/baseline_delete_black_36dp"
+                android:background="@android:color/holo_red_light"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                />
 
         </LinearLayout>
     </ScrollView>

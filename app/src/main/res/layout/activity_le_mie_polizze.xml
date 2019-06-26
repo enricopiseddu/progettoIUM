@@ -18,7 +18,10 @@
             android:background="@android:color/white"
             android:orientation="vertical"
             android:padding="@dimen/padding_12"
-            android:id="@+id/linearLayout">
+            android:id="@+id/linearLayout"
+            android:layout_gravity="center_horizontal">
+
+
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
@@ -36,20 +39,25 @@
                 android:id="@+id/modello_v1"
                 android:visibility="gone"
                 android:textSize="22dp"
-
+                android:layout_gravity="center_horizontal"
                 android:drawableLeft="@drawable/ok_check"
                 android:layout_marginLeft="1dp"/>
 
             <Button
-                android:layout_width="200dp"
-                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="VEDI"
-                android:id="@+id/vedi1"/>
+                android:id="@+id/vedi1"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/baseline_info_black_36dp"/>
             <Button
-                android:layout_width="200dp"
-                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="MODIFICA"
                 android:id="@+id/modifica1"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/baseline_edit_black_36dp"
+
                 />
             <View
                 android:layout_width="match_parent"
@@ -64,17 +72,23 @@
                 android:id="@+id/modello_v2"
                 android:textSize="22dp"
                 android:visibility="gone"
-                android:drawableLeft="@drawable/error"/>
+                android:drawableLeft="@drawable/error"
+                android:layout_gravity="center_horizontal"/>
             <Button
-                android:layout_width="200dp"
-                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="VEDI"
-                android:id="@+id/vedi2"/>
+                android:id="@+id/vedi2"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/baseline_info_black_36dp"/>
             <Button
-                android:layout_width="200dp"
-                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="MODIFICA"
-                android:id="@+id/modifica2"/>
+                android:id="@+id/modifica2"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/baseline_edit_black_36dp"
+                />
 
             <View
                 android:layout_width="match_parent"
@@ -89,17 +103,22 @@
                 android:id="@+id/modello_v3"
                 android:visibility="gone"
                 android:textSize="22dp"
-                android:drawableLeft="@drawable/yellow_alert"/>
+                android:drawableLeft="@drawable/yellow_alert"
+                android:layout_gravity="center_horizontal"/>
             <Button
-                android:layout_width="200dp"
-                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="VEDI"
-                android:id="@+id/vedi3"/>
+                android:id="@+id/vedi3"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/baseline_info_black_36dp"/>
             <Button
-                android:layout_width="200dp"
-                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="MODIFICA"
                 android:id="@+id/modifica3"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/baseline_edit_black_36dp"
                 />
 
 

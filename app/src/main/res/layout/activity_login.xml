@@ -96,7 +96,7 @@
                 android:id="@+id/accedi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/holo_green_light"
+                android:background="#99ccff"
                 android:text="ACCEDI"
                 android:textSize="20dp" />
 

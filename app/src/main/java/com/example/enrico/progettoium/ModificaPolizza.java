@@ -20,7 +20,7 @@ public class ModificaPolizza extends AppCompatActivity {
     Switch assistenzaStradale, cristalli, furto, guidaEsperta, incendio ,kasko;
     Button pulsanteAggiornaAccessori;
 
-    int prezzoAccessori=0;
+    int prezzoAccessori=0, oldPrezzoAccessori=0;
     public static final String POLIZZA_EXTRA="com.example.enrico.progettoium.Polizza";
 
 
@@ -67,6 +67,8 @@ public class ModificaPolizza extends AppCompatActivity {
 
         settaggioAccessori();
         totaleAccessori.setText("Totale Accessori € "+Integer.toString(prezzoAccessori)+".00");
+        oldPrezzoAccessori=prezzoAccessori;
+
 
         assistenzaStradale.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -157,21 +159,27 @@ public class ModificaPolizza extends AppCompatActivity {
         pulsanteAggiornaAccessori.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pulsanteAggiornaAccessori.setVisibility(View.GONE);
-                Snackbar.make(v, "Accessori aggiornati. Tra qualche secondo potrai confermare le modifiche apportate", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                new Timer().schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        // this code will be executed after 2 seconds
-                        Intent i = new Intent(ModificaPolizza.this,
-                                Pagamento.class);
-                        i.putExtra(POLIZZA_EXTRA, polizza);
-                        startActivity(i);
-                    }
-                }, 4000);
+                //pulsanteAggiornaAccessori.setVisibility(View.GONE);
 
-
+                if( prezzoAccessori>oldPrezzoAccessori ) {
+                    Snackbar.make(v, "Accessori aggiornati. Tra qualche secondo potrai confermare le modifiche apportate", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                    new Timer().schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            // this code will be executed after 2 seconds
+                            Intent i = new Intent(ModificaPolizza.this,
+                                    Pagamento.class);
+                            i.putExtra(POLIZZA_EXTRA, polizza);
+                            startActivity(i);
+                        }
+                    }, 4000);
+                }
+                else
+                {
+                    Snackbar.make(v, "Accessori aggiornati correttamente. Pagamento non necessario.", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
             }
         });
     }

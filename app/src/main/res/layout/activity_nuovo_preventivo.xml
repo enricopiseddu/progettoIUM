@@ -91,14 +91,13 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="72dp"
-                android:layout_marginLeft="72dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginBottom="0dp"
                 android:backgroundTint="@android:color/holo_green_light"
-                android:text="INVIA RICHIESTA"
-                android:textSize="25dp"
                 android:drawableRight="@drawable/outline_send_black_36dp"
-                />
+                android:text="INVIA RICHIESTA"
+                android:textSize="25dp" />
 
             <TextView
                 android:id="@+id/textView13"

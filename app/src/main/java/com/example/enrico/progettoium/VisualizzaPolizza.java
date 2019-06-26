@@ -3,6 +3,7 @@ package com.example.enrico.progettoium;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -18,7 +19,7 @@ public class VisualizzaPolizza extends AppCompatActivity {
 
     TextView infoVeicolo, statoPolizza, accessori, totalePremio;
     String listaAccessori;
-    Button pagaOra;
+    Button pagaOra, download;
 
 
     @Override
@@ -48,6 +49,7 @@ public class VisualizzaPolizza extends AppCompatActivity {
         accessori=(TextView)findViewById(R.id.accessori);
 
         pagaOra=(Button)findViewById(R.id.pagaOra);
+        download=(Button)findViewById(R.id.downloadCertificato);
 
         infoVeicolo.setText("Veicolo:                " + polizza.getVeicolo().getModello() + "\n" +
                             "Targa:                    " + polizza.getVeicolo().getTarga() + "\n\n" +
@@ -122,6 +124,15 @@ public class VisualizzaPolizza extends AppCompatActivity {
                 startActivity(pagamento);
             }
         });
+
+        download.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v, "Download in corso ...", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
 
     }
 

@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -21,12 +22,14 @@ import java.util.TimerTask;
 public class Pagamento extends AppCompatActivity {
 
     Polizza polizza;
-    TextView modelloVeicolo, targaVeicolo, listaAccessori, prezzoDaPagare, datiInformativi;
+    TextView modelloVeicolo, targaVeicolo, listaAccessori, prezzoDaPagare, avvenutoPagamento;
     EditText numeroCarta, meseScadenza, annoScadenza, codiceCCV;
 
 
     Button pagaOra;
     String lista_acc;
+
+    CheckBox accettazioneContratto;
 
     public static final String POLIZZA_EXTRA="com.example.enrico.progettoium.Polizza";
 
@@ -41,7 +44,7 @@ public class Pagamento extends AppCompatActivity {
         polizza=(Polizza)obj;
 
 
-
+        accettazioneContratto = findViewById(R.id.accettazioneContratto);
         modelloVeicolo = (TextView)findViewById(R.id.modelloVeicolo);
         targaVeicolo = (TextView)findViewById(R.id.targaVeicolo);
         listaAccessori = (TextView)findViewById(R.id.listaAccessori);
@@ -51,7 +54,9 @@ public class Pagamento extends AppCompatActivity {
         annoScadenza = (EditText)findViewById(R.id.annoScadenzaCarta);
         codiceCCV = (EditText)findViewById(R.id.codiceCCV);
         pagaOra = (Button)findViewById(R.id.paga);
-        datiInformativi = (TextView)findViewById(R.id.datiInformativi);
+        avvenutoPagamento = (TextView)findViewById(R.id.avvenutoPagamento);
+
+        avvenutoPagamento.setVisibility(View.GONE);
 
 
         modelloVeicolo.setText(polizza.getVeicolo().getModello());
@@ -62,7 +67,7 @@ public class Pagamento extends AppCompatActivity {
 
         lista_acc =polizza.getAccessori().toString();
         listaAccessori.setText(Html.fromHtml("<u>"+lista_acc+"</u>"));
-        datiInformativi.setText(Html.fromHtml("Il sottoscritto contraente, dichiara di aver preso visione delle clausole indicate nel foglio illustrativo disponibile al link: " + "<u>" + "www.allianz.it/clausole_polizze" +"</u>"));
+        //datiInformativi.setText(Html.fromHtml("Il sottoscritto contraente, dichiara di aver preso visione delle clausole indicate nel foglio illustrativo disponibile al link: " + "<u>" + "www.allianz.it/clausole_polizze" +"</u>"));
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_stat_name);
@@ -86,11 +91,12 @@ public class Pagamento extends AppCompatActivity {
                 if (checkInput()){
 
                     pagaOra.setVisibility(View.GONE);
-                    datiInformativi.setText("Il pagamento è stato effettuato e la polizza è stata correttamente " +
-                            "attivata. Riceverai una mail di conferma con allegata la ricevuta.\nTra qualche istante verrai reindirizzato al menù principale");
-                    datiInformativi.setTextColor(Color.rgb(0,204,0));
-                    datiInformativi.setClickable(false);
-
+                    accettazioneContratto.setVisibility(View.GONE);
+                    avvenutoPagamento.setVisibility(View.VISIBLE);
+                    avvenutoPagamento.setText("Il pagamento è stato effettuato e la polizza è stata correttamente " +
+                            "attivata: riceverai una mail di conferma con allegata la ricevuta");
+                    avvenutoPagamento.setTextColor(Color.rgb(0,153,51));
+/*
                     new Timer().schedule(new TimerTask() {
                         @Override
                         public void run() {
@@ -99,7 +105,7 @@ public class Pagamento extends AppCompatActivity {
                                     Menu.class);
                             startActivity(i);
                         }
-                    }, 7000);
+                    }, 7000);*/
                 }
 
             }
@@ -116,14 +122,14 @@ public class Pagamento extends AppCompatActivity {
         });
 
 
-
+/*
         datiInformativi.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.allianz.it"));
                     startActivity(intent); }
         });
-
+*/
 
 
     }
@@ -173,6 +179,14 @@ public class Pagamento extends AppCompatActivity {
         }
         else
             codiceCCV.setError(null);
+
+        if(!accettazioneContratto.isChecked()){
+            errors++;
+            accettazioneContratto.setError("");
+        }
+        else{
+            accettazioneContratto.setError(null);
+        }
 
         return errors==0; // ritorna true se non ci sono errori
 
