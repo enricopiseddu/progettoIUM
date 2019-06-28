@@ -56,6 +56,17 @@ public class Login extends AppCompatActivity {
         registrazione = (TextView)findViewById(R.id.registrazione);
 
 
+        registrazione.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent reg = new Intent(Login.this,
+                        Registrazione.class);
+                startActivity(reg);
+
+            }
+        });
+
+
         //l'utente preme il pulsante "Accedi"
         pulsanteAccedi.setOnClickListener(new View.OnClickListener()
         {

@@ -2,7 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.enrico.progettoium">
 
-    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"
+        />
+    <uses-permission android:name="android.permission.CAMERA"
+        />
+
+    <uses-feature android:name="android.hardware.camera" />
 
     <application
         android:allowBackup="true"
@@ -13,17 +18,18 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Login"
-            android:windowSoftInputMode="stateHidden"
-            android:noHistory="true"
-            android:theme="@style/AppTheme.NoActionBar">
+
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menu"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Menu"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Profilo"
             android:label="@string/title_activity_profilo"
@@ -48,21 +54,22 @@
         <activity
             android:name=".Preventivi"
             android:label="@string/title_activity_preventivi"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Pagamento"
             android:label="Pagamento"
-            android:windowSoftInputMode="stateHidden"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".NuovoPreventivo"
-            android:windowSoftInputMode="stateHidden"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
         />
-        <activity android:name=".MostraPreventivo"
+        <activity
+            android:name=".MostraPreventivo"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Registrazione"
             android:theme="@style/AppTheme.NoActionBar">
-
         </activity>
     </application>
 
