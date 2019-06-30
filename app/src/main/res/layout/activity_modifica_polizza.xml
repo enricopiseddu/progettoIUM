@@ -142,7 +142,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="AGGIORNA ACCESSORI"
-                android:background="@android:color/holo_green_light"
+                android:background="#99ccff"
                 android:textSize="20dp"
                 android:id="@+id/pulsanteAggiornaAccessori"/>
             <TextView

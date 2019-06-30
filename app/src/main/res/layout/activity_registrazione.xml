@@ -67,7 +67,8 @@
                 android:layout_marginStart="55dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="104dp"
-                android:text="Nome" />
+                android:text="Nome"
+                android:textColor="@android:color/black"/>
 
             <TextView
 
@@ -79,7 +80,9 @@
                 android:layout_marginStart="31dp"
                 android:layout_marginLeft="31dp"
                 android:layout_marginTop="73dp"
-                android:text="Cognome" />
+                android:text="Cognome"
+                android:textColor="@android:color/black"/>
+
 
             <TextView
 
@@ -91,10 +94,12 @@
                 android:layout_marginStart="2dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginTop="138dp"
-                android:text="Codice Fiscale" />
+                android:text="Codice Fiscale"
+                android:textColor="@android:color/black"/>
+
 
             <Button
-                android:id="@+id/paga"
+                android:id="@+id/registrazione"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/modVeicolo"
@@ -104,7 +109,7 @@
                 android:layout_marginStart="64dp"
                 android:layout_marginLeft="64dp"
                 android:layout_marginBottom="0dp"
-                android:backgroundTint="@android:color/holo_green_light"
+                android:backgroundTint="#99ccff"
                 android:drawableRight="@drawable/outline_send_black_36dp"
                 android:text="registrati"
                 android:textSize="25dp" />
@@ -186,7 +191,9 @@
                 android:layout_marginStart="18dp"
                 android:layout_marginLeft="18dp"
                 android:layout_marginTop="195dp"
-                android:text="E-mail" />
+                android:text="E-mail"
+                android:textColor="@android:color/black"
+            />
 
             <TextView
                 android:id="@+id/textView19"
@@ -198,7 +205,9 @@
                 android:layout_marginStart="19dp"
                 android:layout_marginLeft="19dp"
                 android:layout_marginTop="223dp"
-                android:text="Username" />
+                android:text="Username"
+                android:textColor="@android:color/black"/>
+
 
             <TextView
                 android:id="@+id/textView21"
@@ -210,7 +219,9 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="250dp"
-                android:text="Password" />
+                android:text="Password"
+                android:textColor="@android:color/black"/>
+
 
             <TextView
                 android:id="@+id/textView22"
@@ -222,10 +233,12 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="-71dp"
-                android:text="Conferma Password" />
+                android:text="Conferma Password"
+                android:textColor="@android:color/black"/>
+
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/emailRegistrazione"
                 android:layout_width="226dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -239,7 +252,7 @@
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/usernameRegistrazione"
                 android:layout_width="226dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -253,7 +266,7 @@
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editText8"
+                android:id="@+id/pwdReg1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -267,7 +280,7 @@
                 android:inputType="textPassword" />
 
             <EditText
-                android:id="@+id/editText11"
+                android:id="@+id/pwdReg2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -290,19 +303,23 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginLeft="12dp"
                 android:layout_marginTop="335dp"
-                android:text="Certifica la tua identità facendo un breve video in cui dichiari il tuo nome e cognome e confermi la volontà di registrarti!" />
+
+                android:text="Certifica la tua identità facendo un breve video in cui dichiari il tuo nome e cognome e confermi la volontà di registrarti!"
+                android:textColor="@android:color/black"/>
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/allegato"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="96dp"
-                android:layout_marginLeft="96dp"
-                android:layout_marginTop="400dp"
-                android:text="Nessun video allegato!" />
+                android:layout_marginStart="109dp"
+                android:layout_marginLeft="109dp"
+                android:layout_marginTop="403dp"
+                android:text="Nessun video allegato!"
+                android:textColor="@android:color/black"/>
+            />
 
             <ImageView
                 android:id="@+id/fotocamera"
@@ -311,9 +328,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="45dp"
-                android:layout_marginLeft="45dp"
-                android:layout_marginTop="390dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="396dp"
                 app:srcCompat="@drawable/baseline_camera_alt_black_36dp" />
 
             <ImageView
@@ -323,9 +340,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="391dp"
-                android:layout_marginEnd="67dp"
-                android:layout_marginRight="67dp"
+                android:layout_marginTop="398dp"
+                android:layout_marginEnd="34dp"
+                android:layout_marginRight="34dp"
                 android:visibility="gone"
                 app:srcCompat="@drawable/baseline_attach_file_black_36dp" />
 

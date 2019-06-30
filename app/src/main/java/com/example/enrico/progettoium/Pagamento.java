@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -30,6 +31,7 @@ public class Pagamento extends AppCompatActivity {
     String lista_acc;
 
     CheckBox accettazioneContratto;
+    ImageView img_pagamento;
 
     public static final String POLIZZA_EXTRA="com.example.enrico.progettoium.Polizza";
 
@@ -64,7 +66,8 @@ public class Pagamento extends AppCompatActivity {
         listaAccessori.setText(polizza.getAccessori().toString());
         prezzoDaPagare.setText(String.valueOf(polizza.getPrezzo()) + "0");
 
-
+        img_pagamento= findViewById(R.id.img_conferma);
+        img_pagamento.setVisibility(View.GONE);
         lista_acc =polizza.getAccessori().toString();
         listaAccessori.setText(Html.fromHtml("<u>"+lista_acc+"</u>"));
         //datiInformativi.setText(Html.fromHtml("Il sottoscritto contraente, dichiara di aver preso visione delle clausole indicate nel foglio illustrativo disponibile al link: " + "<u>" + "www.allianz.it/clausole_polizze" +"</u>"));
@@ -92,6 +95,7 @@ public class Pagamento extends AppCompatActivity {
 
                     pagaOra.setVisibility(View.GONE);
                     accettazioneContratto.setVisibility(View.GONE);
+                    img_pagamento.setVisibility(View.VISIBLE);
                     avvenutoPagamento.setVisibility(View.VISIBLE);
                     avvenutoPagamento.setText("Il pagamento è stato effettuato e la polizza è stata correttamente " +
                             "attivata: riceverai una mail di conferma con allegata la ricevuta");

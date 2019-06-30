@@ -56,7 +56,9 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="103dp"
-                android:text="Targa:" />
+                android:text="Targa:"
+                android:textColor="@android:color/black" />
+
 
             <TextView
 
@@ -68,7 +70,9 @@
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="141dp"
-                android:text="Decorrenza" />
+                android:text="Decorrenza:"
+                android:textColor="@android:color/black" />
+
 
             <TextView
 
@@ -81,7 +85,9 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="178dp"
-                android:text="Frazionamento:" />
+                android:text="Frazionamento:"
+                android:textColor="@android:color/black" />
+
 
             <Button
                 android:id="@+id/paga"
@@ -94,10 +100,11 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginBottom="0dp"
-                android:backgroundTint="@android:color/holo_green_light"
+                android:backgroundTint="#99ccff"
                 android:drawableRight="@drawable/outline_send_black_36dp"
-                android:text="INVIA RICHIESTA"
-                android:textSize="25dp" />
+                android:text="INVIA  RICHIESTA"
+                android:textSize="23dp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/textView13"
@@ -160,6 +167,7 @@
                 android:layout_marginEnd="21dp"
                 android:layout_marginRight="21dp"
                 android:editable="false"
+                android:hint="01/01/2020"
                 android:ems="10" />
 
             <Spinner

@@ -113,9 +113,10 @@
                 android:layout_marginStart="57dp"
                 android:layout_marginLeft="57dp"
                 android:layout_marginBottom="0dp"
-                android:backgroundTint="@android:color/holo_green_light"
-                android:text="PAGA LA POLIZZA"
-                android:textSize="25dp" />
+                android:backgroundTint="#99ccff"
+                android:text="PAGA  LA  POLIZZA"
+                android:textSize="23dp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/modelloVeicolo"
@@ -348,12 +349,12 @@
                 android:layout_marginStart="17dp"
                 android:layout_marginLeft="17dp"
                 android:layout_marginTop="400dp"
-                android:text="Il sottoscritto contraente, dichiara di aver preso visione delle clausole indicate nel foglio illustrativo disponibile al link: www.allianz.it/clausole_polizze" />
+                android:text="Il sottoscritto contraente, dichiara di aver preso visione delle clausole indicate nel foglio illustrativo disponibile al link:\nwww.allianz.it/clausole_polizze" />
 
             <TextView
                 android:id="@+id/avvenutoPagamento"
-                android:layout_width="335dp"
-                android:layout_height="130dp"
+                android:layout_width="337dp"
+                android:layout_height="91dp"
                 android:layout_alignEnd="@+id/textView14"
                 android:layout_alignRight="@+id/textView14"
                 android:layout_alignParentBottom="true"
@@ -361,7 +362,21 @@
                 android:layout_marginRight="-275dp"
                 android:layout_marginBottom="24dp"
                 android:gravity="center_horizontal"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_conferma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="147dp"
+                android:layout_marginLeft="147dp"
+                android:layout_marginTop="387dp"
+                app:srcCompat="@drawable/ok_check" />
 
         </RelativeLayout>
     </ScrollView>

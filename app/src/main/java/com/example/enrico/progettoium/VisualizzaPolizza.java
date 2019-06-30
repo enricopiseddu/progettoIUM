@@ -69,7 +69,7 @@ public class VisualizzaPolizza extends AppCompatActivity {
 
         if(polizza.isAttiva()==true){
             statoPolizza.setText("POLIZZA ATTIVA");
-            statoPolizza.setTextColor(Color.GREEN);
+            statoPolizza.setTextColor(Color.rgb(0,153,51));
         }
         if(polizza.isInScadenza()==true){
             statoPolizza.setText("POLIZZA IN SCADENZA");

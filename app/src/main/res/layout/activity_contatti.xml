@@ -94,7 +94,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="210dp"
                     android:text="INVIA"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    android:background="#99ccff"/>
 
                 <!-- CHIAMA AGENZIA-->
                 <android.support.v4.widget.Space
@@ -163,11 +164,12 @@
 
                 <Button
                     android:id="@+id/ok_selezione_orario"
-                    android:layout_width="300dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="CONFERMA"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    android:background="#99ccff"/>
             </RadioGroup>
         </LinearLayout>
     </ScrollView>

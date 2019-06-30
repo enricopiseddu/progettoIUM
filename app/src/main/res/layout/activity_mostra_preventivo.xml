@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:text="ACCETTA PREVENTIVO"
                 android:id="@+id/accettaPreventivo"
-                android:background="@android:color/holo_green_light"
+                android:background="#10aaff"
                 android:textStyle="bold"
                 android:textSize="16dp"
                 android:drawableLeft="@drawable/baseline_done_outline_black_36dp"
@@ -93,13 +93,13 @@
             <Button
                 android:layout_width="match_parent"
                 android:id="@+id/rifiutaPreventivo"
-
                 android:layout_height="wrap_content"
                 android:text="ELIMINA PREVENTIVO"
                 android:drawableLeft="@drawable/baseline_delete_black_36dp"
-                android:background="@android:color/holo_red_light"
+                android:background="#99ccff"
                 android:textSize="16dp"
                 android:textStyle="bold"
+
                 />
 
         </LinearLayout>
