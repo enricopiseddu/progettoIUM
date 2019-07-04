@@ -26,9 +26,9 @@ public class Login extends AppCompatActivity {
             new Utente("demo", "demo", "1",
                     "1", "05/09/1976", 1234567891, 1234567891);
     private Utente ut2 = new Utente("Gianni", "Lai", "gianni.lai@gmail.com",
-            "gianni", "12/03/1966", 1234567891, 1234567891);
+            "gianni", "12/03/1966", 402361001, 345264255);
     private Utente ut3 = new Utente("Clara", "Melis", "clara.melis@gmail.com",
-            "clara", "1975-12-05", 1234567891, 1234567891);
+            "clara", "1975-12-05", 402512541, 346958744);
 
     private String actualUsername, actualPassword;
 

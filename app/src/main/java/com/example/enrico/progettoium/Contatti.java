@@ -82,7 +82,7 @@ public class Contatti extends AppCompatActivity {
                         if(testo_messaggio.getText().length()>0) {
 
                             pulsante_invia_messaggio.setVisibility(View.GONE);
-                            Snackbar.make(v, "Il tuo messaggio è stato inviato . Verrai ricontattato a breve", Snackbar.LENGTH_LONG)
+                            Snackbar.make(v, "Il tuo messaggio è stato inviato.\nVerrai ricontattato a breve", Snackbar.LENGTH_LONG)
                                     .setAction("Action", null).show();
                         }
                         else
