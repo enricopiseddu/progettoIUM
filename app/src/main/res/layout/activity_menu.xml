@@ -51,7 +51,7 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:text="IL MIO PROFILO"
                 android:textAlignment="center"
                 android:drawableLeft="@drawable/baseline_person_black_36dp"
@@ -64,9 +64,9 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:text="LE MIE POLIZZE"
-                android:drawableLeft="@drawable/multiply"
+                android:drawableLeft="@drawable/error"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:id="@+id/le_mie_polizze_button"/>
@@ -77,7 +77,7 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:text="PREVENTIVI"
                 android:textAlignment="center"
                 android:drawableLeft="@drawable/baseline_folder_black_36dp"
@@ -90,7 +90,7 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:drawableLeft="@drawable/baseline_call_black_36dp"
                 android:text="CONTATTA AGENZIA"
                 android:textAlignment="center"
@@ -99,7 +99,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="15dp" />
+                android:layout_height="36dp" />
 
             <Button
                 android:layout_width="138dp"

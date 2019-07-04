@@ -35,53 +35,58 @@
 
             <TextView
                 android:id="@+id/modello_v1"
-                android:layout_width="100dp"
+                android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="74dp"
-                android:layout_marginLeft="74dp"
-                android:layout_marginTop="93dp"
-                android:text="TextView" />
+                android:layout_marginStart="61dp"
+                android:layout_marginLeft="61dp"
+                android:layout_marginTop="90dp"
+                android:text="TextView"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/modello_v2"
-                android:layout_width="100dp"
+                android:layout_width="143dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="77dp"
-                android:layout_marginLeft="77dp"
-                android:layout_marginTop="185dp"
-                android:text="TextView" />
+                android:layout_marginStart="60dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="180dp"
+                android:text="TextView"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/modello_v3"
-                android:layout_width="100dp"
+                android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="76dp"
-                android:layout_marginLeft="76dp"
-                android:layout_marginTop="282dp"
-                android:text="TextView" />
+                android:layout_marginStart="59dp"
+                android:layout_marginLeft="59dp"
+                android:layout_marginTop="277dp"
+                android:text="TextView"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
 
             <Button
                 android:id="@+id/vedi2"
-                android:drawableLeft="@drawable/baseline_info_black_36dp"
-                android:backgroundTint="@android:color/white"
                 android:layout_width="64dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="167dp"
-                android:layout_marginEnd="102dp"
-                android:layout_marginRight="102dp"
-                />
+                android:layout_marginEnd="76dp"
+                android:layout_marginRight="76dp"
+                android:backgroundTint="@android:color/white"
+                android:drawableLeft="@drawable/baseline_info_black_36dp" />
 
             <Button
                 android:id="@+id/modifica3"
@@ -91,27 +96,26 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="262dp"
-                android:layout_marginEnd="19dp"
-                android:layout_marginRight="19dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
                 android:backgroundTint="@android:color/white"
-                android:drawableLeft="@drawable/baseline_edit_black_36dp"/>
+                android:drawableLeft="@drawable/baseline_edit_black_36dp" />
 
             <Button
                 android:id="@+id/modifica2"
                 android:layout_width="64dp"
-                android:backgroundTint="@android:color/white"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="167dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="11dp"
+                android:layout_marginRight="11dp"
+                android:backgroundTint="@android:color/white"
                 android:drawableLeft="@drawable/baseline_edit_black_36dp" />
 
             <Button
 
-                android:backgroundTint="@android:color/white"
                 android:id="@+id/modifica1"
                 android:layout_width="64dp"
                 android:layout_height="wrap_content"
@@ -119,74 +123,73 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="74dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@android:color/white"
                 android:drawableLeft="@drawable/baseline_edit_black_36dp" />
 
             <Button
-                android:backgroundTint="@android:color/white"
-
                 android:id="@+id/vedi1"
-                android:drawableLeft="@drawable/baseline_info_black_36dp"
+
                 android:layout_width="64dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="73dp"
-                android:layout_marginEnd="102dp"
-                android:layout_marginRight="102dp"
-                />
+                android:layout_marginTop="75dp"
+                android:layout_marginEnd="76dp"
+                android:layout_marginRight="76dp"
+                android:backgroundTint="@android:color/white"
+                android:drawableLeft="@drawable/baseline_info_black_36dp" />
 
             <Button
                 android:id="@+id/vedi3"
-                android:drawableLeft="@drawable/baseline_info_black_36dp"
                 android:layout_width="64dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="262dp"
-                android:layout_marginEnd="101dp"
-                android:layout_marginRight="101dp"
+                android:layout_marginTop="261dp"
+                android:layout_marginEnd="75dp"
+                android:layout_marginRight="75dp"
                 android:backgroundTint="@android:color/white"
-                />
+                android:drawableLeft="@drawable/baseline_info_black_36dp" />
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="61dp"
-                android:layout_height="61dp"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="7dp"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="73dp"
-                app:srcCompat="@drawable/ok_check" />
+                android:layout_marginStart="11dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="83dp"
+                app:srcCompat="@drawable/green" />
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="58dp"
-                android:layout_height="58dp"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="166dp"
-                app:srcCompat="@drawable/error" />
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="173dp"
+                app:srcCompat="@drawable/red" />
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="61dp"
-                android:layout_height="62dp"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="261dp"
-                app:srcCompat="@drawable/yellow_alert" />
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="267dp"
+                app:srcCompat="@drawable/yellow" />
 
 
         </RelativeLayout>

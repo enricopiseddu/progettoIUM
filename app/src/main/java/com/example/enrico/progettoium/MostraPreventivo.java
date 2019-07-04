@@ -67,6 +67,8 @@ public class MostraPreventivo extends AppCompatActivity {
         rifiuta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                accetta.setVisibility(View.GONE);
+                rifiuta.setVisibility(View.GONE);
                 Snackbar.make(v, "Il preventivo sarà eliminato definitivamente nelle prossime 24 ore.", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }

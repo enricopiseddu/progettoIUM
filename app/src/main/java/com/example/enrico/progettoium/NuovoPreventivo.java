@@ -82,16 +82,9 @@ public class NuovoPreventivo extends AppCompatActivity {
             public void onClick(View v) {
                 if(checkInput()){
 
-                    Snackbar.make(v, "La tua richiesta è stata inoltrata correttamente\nVerrai reindirizzato ai preventivi", Snackbar.LENGTH_LONG)
+                    Snackbar.make(v, "La tua richiesta è stata inoltrata correttamente", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    new Timer().schedule(new TimerTask() {
-                        @Override
-                        public void run() {
-                            // this code will be executed after 2 seconds
-                            Intent preventivi = new Intent(NuovoPreventivo.this, Preventivi.class);
-                            startActivity(preventivi);
-                        }
-                    }, 5000);
+                    invia_preventivo.setVisibility(View.GONE);
                 }
             }
         });

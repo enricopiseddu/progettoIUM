@@ -90,7 +90,7 @@
 
                 <Button
                     android:id="@+id/pulsante_invia_messaggio"
-                    android:layout_width="127dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="210dp"
                     android:text="INVIA"

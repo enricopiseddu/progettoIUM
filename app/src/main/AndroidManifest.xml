@@ -69,7 +69,8 @@
             android:name=".MostraPreventivo"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".Registrazione"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
         </activity>
     </application>
 
