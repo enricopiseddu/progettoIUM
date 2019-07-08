@@ -110,12 +110,32 @@ public class LeMiePolizze extends AppCompatActivity {
             }
         });
 
+        modello_v1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent visualizza_polizza = new Intent(LeMiePolizze.this,
+                        VisualizzaPolizza.class);
+                visualizza_polizza.putExtra(POLIZZA_EXTRA, p1);
+                startActivity(visualizza_polizza);
+            }
+        });
+
+
         vedi2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent visualizza_polizza = new Intent(LeMiePolizze.this,
                         VisualizzaPolizza.class);
 
+                visualizza_polizza.putExtra(POLIZZA_EXTRA, p2);
+                startActivity(visualizza_polizza);
+            }
+        });
+        modello_v2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent visualizza_polizza = new Intent(LeMiePolizze.this,
+                        VisualizzaPolizza.class);
                 visualizza_polizza.putExtra(POLIZZA_EXTRA, p2);
                 startActivity(visualizza_polizza);
             }
@@ -131,6 +151,15 @@ public class LeMiePolizze extends AppCompatActivity {
             }
         });
 
+        modello_v3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent visualizza_polizza = new Intent(LeMiePolizze.this,
+                        VisualizzaPolizza.class);
+                visualizza_polizza.putExtra(POLIZZA_EXTRA, p3);
+                startActivity(visualizza_polizza);
+            }
+        });
 
         modifica1.setOnClickListener(new View.OnClickListener() {
             @Override

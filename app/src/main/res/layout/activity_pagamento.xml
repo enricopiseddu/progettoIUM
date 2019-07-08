@@ -181,6 +181,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="247dp"
                 android:text="Inserisci i dati della carta"
+                android:textStyle="bold"
                 android:textColor="@android:color/black" />
 
             <View
@@ -337,6 +338,7 @@
                 android:layout_marginLeft="14dp"
                 android:layout_marginTop="72dp"
                 android:text="Riepilogo Dati"
+                android:textStyle="bold"
                 android:textColor="@android:color/black" />
 
             <CheckBox
