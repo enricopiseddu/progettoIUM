@@ -35,16 +35,14 @@
                 app:title="Il mio profilo" />
 
 
-
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/preventivo1"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="\nNr. 1:        Fiat 500X\nTarga:      FR852LP \n"
-                android:textSize="23dp"
-                android:textStyle="bold"
                 android:textColor="@android:color/black"
-                android:id="@+id/preventivo1"
-                />
+                android:textSize="23dp"
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
@@ -52,14 +50,13 @@
                 android:background="@android:color/darker_gray"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/preventivo2"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="\nNr. 2:        Alfa Mito\nTarga:      DR829AS \n"
-                android:textSize="23dp"
-                android:textStyle="bold"
                 android:textColor="@android:color/black"
-                android:id="@+id/preventivo2"
-                />
+                android:textSize="23dp"
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
@@ -67,14 +64,13 @@
                 android:background="@android:color/darker_gray"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/preventivo3"
+                android:layout_width="373dp"
                 android:layout_height="match_parent"
                 android:text="\nNr. 3:        Volkswagen Golf\nTarga:      CT936TV\n"
-                android:textSize="23dp"
-                android:textStyle="bold"
                 android:textColor="@android:color/black"
-                android:id="@+id/preventivo3"
-                />
+                android:textSize="23dp"
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"

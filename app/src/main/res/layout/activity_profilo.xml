@@ -39,11 +39,13 @@
                 android:layout_height="15dp" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" Nome Cognome"
                 android:textSize="20dp"
                 android:id="@+id/nome_cognome"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black"
                 />
 
             <android.support.v4.widget.Space
@@ -55,6 +57,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/baseline_home_black_36dp"
                 android:text=" Indirizzo:"
+                android:textSize="18dp"
                 />
             <EditText
                 android:layout_width="match_parent"
@@ -71,6 +74,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/baseline_call_black_36dp"
                 android:text=" Cellulare:"
+                android:textSize="18dp"
                 />
             <EditText
                 android:layout_width="match_parent"
@@ -88,6 +92,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/baseline_alternate_email_black_36dp"
                 android:text=" Email:"
+                android:textSize="18dp"
                 />
             <EditText
                 android:layout_width="match_parent"
@@ -104,6 +109,7 @@
                 android:layout_height="wrap_content"
                 android:text=" Numero Carta di Credito:"
                 android:drawableLeft="@drawable/baseline_credit_card_black_36dp"
+                android:textSize="18dp"
                 />
             <EditText
                 android:layout_width="match_parent"
